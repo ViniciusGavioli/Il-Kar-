@@ -1,7 +1,7 @@
 # Cantigas — Ilê Asé Karè Oju Igbi
 
-Material de apoio interno: letras, traduções e áudios de referência das cantigas,
-organizados por linha de culto.
+Material de apoio interno: letras e áudios de referência dos pontos cantados de
+caboclo e boiadeiro.
 
 No ar em **ileasekareojuigbi.vercel.app**
 
@@ -34,7 +34,10 @@ não funciona: o navegador bloqueia o carregamento do `dados.js` em `file://`.)
 
 Tudo acontece no `dados.js`. A estrutura tem três níveis:
 
-**linha** (Xirê dos Orixás, Caboclo & Boiadeiro) → **entidade** (Exu, Ogum, um caboclo) → **cantiga** (cada trecho).
+**linha** (Caboclo & Boiadeiro) → **entidade** (a gira) → **cantiga** (cada ponto).
+
+A estrutura aguenta mais de uma linha e mais de uma entidade — o seletor do topo e a
+barra de navegação aparecem sozinhos quando houver mais de uma.
 
 Para acrescentar uma entidade nova, adicione um objeto na lista `entidades` da linha,
 **na posição em que ela é cantada** — a numeração (01, 02, 03…) é automática pela ordem
@@ -105,5 +108,9 @@ git push
 ## Sobre as grafias
 
 As grafias variam de uma fonte para outra. A referência é sempre a forma
-ensinada no terreiro e pelos mais velhos da casa — o que está escrito aqui é
-apoio para estudo, não autoridade sobre a tradição.
+cantada no terreiro e ensinada pelos mais velhos da casa — o que está escrito aqui
+é apoio para estudo, não autoridade sobre a tradição.
+
+As cantigas do xirê dos orixás já estiveram neste repositório e foram retiradas
+porque havia letra com grafia errada. Seguem no histórico do git, em `f5350a3` e
+anteriores: `git show f5350a3:dados.js`.

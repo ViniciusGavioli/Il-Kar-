@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ilê Asé Karè Oju Igbi — Cantigas</title>
-<meta name="description" content="Letras, traduções e áudios de referência das cantigas do xirê e dos pontos de caboclo e boiadeiro — Ilê Asé Karè Oju Igbi.">
-<meta property="og:title" content="Ilê Asé Karè Oju Igbi — Cantigas">
-<meta property="og:description" content="Letras, traduções e áudios de referência das cantigas do xirê e dos pontos de caboclo e boiadeiro.">
+<title>Ilê Asé Karè Oju Igbi — Cantigas de Caboclo</title>
+<meta name="description" content="Pontos cantados de caboclo e boiadeiro, com letra e áudio de referência — Ilê Asé Karè Oju Igbi.">
+<meta property="og:title" content="Ilê Asé Karè Oju Igbi — Cantigas de Caboclo">
+<meta property="og:description" content="Pontos cantados de caboclo e boiadeiro, com letra e áudio de referência.">
 <meta property="og:image" content="/crest.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#100E0B">
@@ -688,7 +688,7 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
   </div>
 
   <footer>
-    <strong>Ilê Asé Karè Oju Igbi</strong> — Cantigas<br>
+    <strong>Ilê Asé Karè Oju Igbi</strong> — Cantigas de Caboclo<br>
     Material de apoio interno para estudo.
     <span class="credit">ileasekareojuigbi.vercel.app</span>
   </footer>
@@ -958,7 +958,8 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
     var ents = linha.entidades || [];
 
     elToc.innerHTML = '';
-    elTocWrap.hidden = ents.length === 0;
+    // Com uma entidade só a navegação seria um chip solto — não vale a barra.
+    elTocWrap.hidden = ents.length < 2;
     ents.forEach(function (ent, i) {
       var chip = el('a', 'chip');
       chip.href = '#' + ent.id;
@@ -1005,7 +1006,8 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
       b.addEventListener('click', function () { tocar(ent.video, ent.nome || '', null); });
       elGrid.appendChild(b);
     });
-    elRapido.hidden = comAudio === 0;
+    // Idem: atalho de áudio só faz sentido havendo mais de um para escolher.
+    elRapido.hidden = comAudio < 2;
 
     elLista.querySelectorAll('.btn-practice').forEach(function (btn) {
       btn.addEventListener('click', function () {
