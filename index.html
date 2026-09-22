@@ -19,8 +19,8 @@
 /* ══════════════════════════════════════════════════════════════════
    TOKENS
    Primitivas nunca são usadas direto nos componentes. Os componentes
-   só falam a linguagem das semânticas, e a cor de cada orixá entra
-   como --orixa, trocada por seção.
+   só falam a linguagem das semânticas, e a cor de cada entidade entra
+   como --entidade, trocada por seção.
    ══════════════════════════════════════════════════════════════════ */
 :root {
   /* ---- primitivas: barro, palha, ouro, sangue ---- */
@@ -57,9 +57,9 @@
   --alerta-borda: #4A2723;
 
   /* cor da entidade — sobrescrita em cada seção */
-  --orixa: var(--ouro-500);        /* preenchimento: conta, faixa, borda */
-  --orixa-luz: var(--ouro-400);    /* a mesma cor quando vira TEXTO no escuro */
-  --orixa-texto: #14110E;          /* o que se lê em cima do preenchimento */
+  --entidade: var(--ouro-500);        /* preenchimento: conta, faixa, borda */
+  --entidade-luz: var(--ouro-400);    /* a mesma cor quando vira TEXTO no escuro */
+  --entidade-texto: #14110E;          /* o que se lê em cima do preenchimento */
 
   /* ---- tipografia ---- */
   --f-display: 'Fraunces', Georgia, serif;
@@ -324,7 +324,7 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
 .note strong { color: var(--acento-claro); font-weight: 600; }
 
 /* ══════════ entidade ══════════ */
-.orixa {
+.entidade {
   position: relative;
   border: 1px solid var(--borda);
   border-radius: var(--r-lg);
@@ -334,23 +334,23 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   scroll-margin-top: 66px;
   transition: border-color var(--d-normal) var(--ease);
 }
-.orixa.open {
-  border-color: color-mix(in srgb, var(--orixa) 42%, var(--borda));
+.entidade.open {
+  border-color: color-mix(in srgb, var(--entidade) 42%, var(--borda));
   box-shadow: var(--sombra);
 }
-/* faixa da cor do orixá no topo do bloco aberto */
-.orixa::before {
+/* faixa da cor da entidade no topo do bloco aberto */
+.entidade::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--orixa), transparent 78%);
+  background: linear-gradient(90deg, var(--entidade), transparent 78%);
   opacity: 0;
   transition: opacity var(--d-normal) var(--ease);
 }
-.orixa.open::before { opacity: 1; }
+.entidade.open::before { opacity: 1; }
 
-.orixa-head {
+.entidade-head {
   width: 100%;
   display: flex;
   align-items: center;
@@ -365,22 +365,22 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   -webkit-tap-highlight-color: transparent;
 }
 /* o número é uma conta do fio */
-.orixa-num {
+.entidade-num {
   flex: 0 0 auto;
   width: 38px; height: 38px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  background: var(--orixa);
-  color: var(--orixa-texto);
+  background: var(--entidade);
+  color: var(--entidade-texto);
   font-family: var(--f-display);
   font-weight: 700;
   font-size: var(--t-md);
   font-variant-numeric: tabular-nums;
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--orixa) 16%, transparent),
-              0 6px 16px -4px var(--orixa);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--entidade) 16%, transparent),
+              0 6px 16px -4px var(--entidade);
 }
-.orixa-titles { flex: 1 1 auto; min-width: 0; }
-.orixa-nome {
+.entidade-titulos { flex: 1 1 auto; min-width: 0; }
+.entidade-nome {
   display: block;
   font-family: var(--f-display);
   font-size: var(--t-xl);
@@ -388,13 +388,13 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   line-height: 1.16;
   color: var(--texto);
 }
-.orixa-yoruba {
+.entidade-sub {
   display: block;
   margin-top: 2px;
   font-size: var(--t-xs);
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--orixa-luz);
+  color: var(--entidade-luz);
   font-weight: 600;
 }
 .chevron {
@@ -403,16 +403,16 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   font-size: var(--t-lg);
   transition: transform var(--d-normal) var(--ease), color var(--d-normal) var(--ease);
 }
-.orixa.open .chevron { transform: rotate(180deg); color: var(--orixa-luz); }
+.entidade.open .chevron { transform: rotate(180deg); color: var(--entidade-luz); }
 
-.orixa-body {
+.entidade-corpo {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows var(--d-normal) var(--ease);
 }
-.orixa.open .orixa-body { grid-template-rows: 1fr; }
-.orixa-body-inner { overflow: hidden; padding: 0 var(--e4); }
-.orixa.open .orixa-body-inner { padding: 0 var(--e4) var(--e5); }
+.entidade.open .entidade-corpo { grid-template-rows: 1fr; }
+.entidade-corpo-interno { overflow: hidden; padding: 0 var(--e4); }
+.entidade.open .entidade-corpo-interno { padding: 0 var(--e4) var(--e5); }
 
 /* ══════════ cantiga ══════════ */
 .cantiga { padding: var(--e4) 0; border-top: 1px solid var(--borda); }
@@ -430,7 +430,7 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   letter-spacing: .13em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--orixa-luz);
+  color: var(--entidade-luz);
 }
 .lyric {
   font-family: var(--f-letra);
@@ -488,7 +488,7 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   color: var(--acento-claro);
   box-shadow: none;
 }
-/* botão de horário: pertence à cor do orixá */
+/* botão de horário: pertence à cor da entidade */
 /* quantas vezes o ponto inteiro é cantado */
 .marca-repete {
   flex: 0 0 auto;
@@ -509,9 +509,9 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   gap: 6px;
   padding: 6px 12px;
   border-radius: var(--r-full);
-  border: 1px solid color-mix(in srgb, var(--orixa-luz) 50%, transparent);
-  background: color-mix(in srgb, var(--orixa-luz) 12%, transparent);
-  color: var(--orixa-luz);
+  border: 1px solid color-mix(in srgb, var(--entidade-luz) 50%, transparent);
+  background: color-mix(in srgb, var(--entidade-luz) 12%, transparent);
+  color: var(--entidade-luz);
   font-family: inherit;
   font-size: var(--t-sm);
   font-weight: 700;
@@ -522,9 +522,9 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
 }
 .btn-trecho:active { transform: scale(.97); }
 .btn-trecho.is-active {
-  background: var(--orixa-luz);
+  background: var(--entidade-luz);
   color: #14110E;
-  border-color: var(--orixa-luz);
+  border-color: var(--entidade-luz);
 }
 .btn-trecho .btn-ic { font-size: 9px; }
 
@@ -563,7 +563,7 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   border-radius: var(--r-md);
   background: var(--superficie);
   border: 1px solid var(--borda);
-  border-left: 3px solid var(--orixa);
+  border-left: 3px solid var(--entidade);
   color: var(--texto-medio);
   font-family: inherit;
   font-size: var(--t-sm);
@@ -574,7 +574,7 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
 }
 .quick-num { font-size: var(--t-xs); color: var(--texto-fraco); font-variant-numeric: tabular-nums; }
 .quick-name { flex: 1; min-width: 0; }
-.quick-ic { color: var(--orixa-luz); font-size: 10px; }
+.quick-ic { color: var(--entidade-luz); font-size: 10px; }
 
 /* ══════════ player fixo ══════════ */
 .mini-player {
@@ -737,9 +737,9 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
   /* ---------- cor ----------
      O dados.js informa só a cor da entidade. Daqui saem as outras duas:
      a cor do número sobre ela, e uma versão clareada para quando a cor
-     precisa virar TEXTO sobre o fundo escuro — porque cores escuras como
-     o azul de Ogum e o vermelho de Xangô não têm contraste suficiente
-     para serem lidas como texto. */
+     precisa virar TEXTO sobre o fundo escuro — uma cor escura o bastante
+     não tem contraste para ser lida como texto, por mais que funcione
+     como preenchimento. */
   var FUNDO_CARTAO = [0x17, 0x13, 0x0F];
 
   function paraRgb(hex) {
@@ -867,27 +867,27 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
   }
 
   function montaEntidade(ent, i) {
-    var sec = el('section', 'orixa');
+    var sec = el('section', 'entidade');
     sec.id = ent.id;
     var cor = ent.cor || '#C9A227';
-    sec.style.setProperty('--orixa', cor);
-    sec.style.setProperty('--orixa-texto', corDoNumero(cor));
-    sec.style.setProperty('--orixa-luz', corParaTexto(cor));
+    sec.style.setProperty('--entidade', cor);
+    sec.style.setProperty('--entidade-texto', corDoNumero(cor));
+    sec.style.setProperty('--entidade-luz', corParaTexto(cor));
 
-    var head = el('button', 'orixa-head');
+    var head = el('button', 'entidade-head');
     head.type = 'button';
     head.setAttribute('aria-expanded', 'false');
-    head.appendChild(el('span', 'orixa-num', numero(i)));
+    head.appendChild(el('span', 'entidade-num', numero(i)));
 
-    var titulos = el('span', 'orixa-titles');
-    titulos.appendChild(el('span', 'orixa-nome', ent.nome || ''));
-    if (ent.subtitulo) titulos.appendChild(el('span', 'orixa-yoruba', ent.subtitulo));
+    var titulos = el('span', 'entidade-titulos');
+    titulos.appendChild(el('span', 'entidade-nome', ent.nome || ''));
+    if (ent.subtitulo) titulos.appendChild(el('span', 'entidade-sub', ent.subtitulo));
     head.appendChild(titulos);
     head.appendChild(el('span', 'chevron', '⌄'));
     sec.appendChild(head);
 
-    var body  = el('div', 'orixa-body');
-    var inner = el('div', 'orixa-body-inner');
+    var body  = el('div', 'entidade-corpo');
+    var inner = el('div', 'entidade-corpo-interno');
     inner.appendChild(contas(9, corParaTexto(cor)));
 
     (ent.cantigas || []).forEach(function (c) { inner.appendChild(montaCantiga(c, ent)); });
@@ -921,14 +921,14 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
 
   function abrir(sec) {
     sec.classList.add('open');
-    sec.querySelector('.orixa-head').setAttribute('aria-expanded', 'true');
+    sec.querySelector('.entidade-head').setAttribute('aria-expanded', 'true');
   }
   function fechar(sec) {
     sec.classList.remove('open');
-    sec.querySelector('.orixa-head').setAttribute('aria-expanded', 'false');
+    sec.querySelector('.entidade-head').setAttribute('aria-expanded', 'false');
   }
   function fecharTodas(exceto) {
-    elLista.querySelectorAll('.orixa.open').forEach(function (s) { if (s !== exceto) fechar(s); });
+    elLista.querySelectorAll('.entidade.open').forEach(function (s) { if (s !== exceto) fechar(s); });
   }
   function alternar(sec) {
     var aberta = sec.classList.contains('open');
@@ -998,8 +998,8 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
       comAudio++;
       var b = el('button', 'quick-btn');
       b.type = 'button';
-      b.style.setProperty('--orixa', ent.cor || '#C9A227');
-      b.style.setProperty('--orixa-luz', corParaTexto(ent.cor || '#C9A227'));
+      b.style.setProperty('--entidade', ent.cor || '#C9A227');
+      b.style.setProperty('--entidade-luz', corParaTexto(ent.cor || '#C9A227'));
       b.appendChild(el('span', 'quick-num', numero(i)));
       b.appendChild(el('span', 'quick-name', ent.nome || ''));
       b.appendChild(el('span', 'quick-ic', '▶'));
@@ -1023,7 +1023,7 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
       if (chipAlvo) chipAlvo.classList.add('active');
       if (opts.rolar) alvo.scrollIntoView({ block: 'start' });
     } else {
-      var primeira = elLista.querySelector('.orixa');
+      var primeira = elLista.querySelector('.entidade');
       if (primeira) abrir(primeira);
     }
 
