@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ilê Asé Karè Oju Igbi — Cantigas do Xirê</title>
+<meta name="description" content="Letras, traduções e áudios de referência das cantigas do xirê, organizados por orixá — Ilê Asé Karè Oju Igbi.">
+<meta property="og:title" content="Ilê Asé Karè Oju Igbi — Cantigas do Xirê">
+<meta property="og:description" content="Letras, traduções e áudios de referência das cantigas do xirê, organizados por orixá.">
+<meta property="og:image" content="/crest.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/jpeg" href="/favicon.jpg">
+<link rel="apple-touch-icon" href="/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBF7EF;
+    --bg-elev: #FFFFFF;
+    --bg-card: #FFFDF8;
+    --line: #E7DCC3;
+    --ink: #2B241C;
+    --muted: #6B5D45;
+    --gold: #B8892B;
+    --gold-soft: #D9A94A;
+    --gold-pale: #F1E2B8;
+    --maroon: #6E1F1F;
+    --radius: 16px;
+    --shadow: 0 6px 22px rgba(80,60,20,.09);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1000px 500px at 50% -8%, rgba(184,137,43,.10), transparent 60%),
+      var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 60px;
+  }
+  h1, h2, .display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  header.hero {
+    position: relative;
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #FFFFFF, rgba(241,226,184,.4) 75%);
+    overflow: hidden;
+  }
+  header.hero::before {
+    content: "";
+    position: absolute;
+    top: -60%; left: 50%;
+    width: 500px; height: 500px;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(184,137,43,.16), transparent 65%);
+    pointer-events: none;
+  }
+  .crest {
+    position: relative;
+    width: 118px;
+    height: auto;
+    display: block;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(184,137,43,.45), 0 12px 28px rgba(110,31,31,.16);
+  }
+  header.hero .eyebrow {
+    position: relative;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  header.hero h1 {
+    position: relative;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.08;
+    color: var(--maroon);
+  }
+  .divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 4px auto 14px;
+    width: 160px;
+  }
+  .divider span {
+    height: 1px; flex: 1;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .divider .diamond {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    flex: 0 0 auto;
+  }
+  header.hero .sub {
+    position: relative;
+    color: var(--muted);
+    font-size: 14.5px;
+    max-width: 440px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  header.hero .terreiro {
+    position: relative;
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  nav.toc-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(251,247,239,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+  }
+  .toc-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 2px 14px;
+    scrollbar-width: none;
+  }
+  .toc-scroll::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .chip .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--dot);
+    box-shadow: 0 0 0 2px rgba(0,0,0,.04);
+  }
+  .chip-num { color: var(--muted); font-size: 11px; }
+  .chip.active { border-color: var(--gold); background: var(--gold-pale); }
+
+  main { max-width: 640px; margin: 0 auto; padding: 18px 14px 0; }
+  .note {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .orixa {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--bg-elev);
+    margin-bottom: 12px;
+    overflow: hidden;
+    scroll-margin-top: 62px;
+    box-shadow: var(--shadow);
+  }
+  .orixa-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 14px;
+    background: transparent;
+    border: none;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .orixa-num {
+    flex: 0 0 auto;
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--accent);
+    color: var(--accent2);
+    font-weight: 700;
+    font-size: 13px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .orixa-titles { flex: 1 1 auto; display: flex; flex-direction: column; }
+  .orixa-nome { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 700; line-height: 1.15; color: var(--maroon); }
+  .orixa-yoruba { font-size: 11.5px; letter-spacing: .08em; color: var(--muted); margin-top: 1px; }
+  .chevron {
+    flex: 0 0 auto;
+    color: var(--gold);
+    font-size: 18px;
+    transition: transform .25s ease;
+  }
+  .orixa.open .chevron { transform: rotate(180deg); }
+
+  .orixa-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .28s ease;
+  }
+  .orixa.open .orixa-body { grid-template-rows: 1fr; }
+  .orixa-body-inner { overflow: hidden; padding: 0 14px; }
+  .orixa.open .orixa-body-inner { padding: 2px 14px 16px; }
+
+  .cantiga {
+    padding: 12px 0;
+    border-top: 1px dashed var(--line);
+  }
+  .cantiga:first-child { border-top: none; }
+  .cantiga-tag {
+    display: inline-block;
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .lyric {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.55;
+    letter-spacing: .002em;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .trad {
+    font-size: 14.5px;
+    color: #6B5D45;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    flex: 1 1 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 11px 14px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+    min-width: 140px;
+  }
+  .btn-primary {
+    background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+    color: #FFFFFF;
+  }
+  .btn-primary:active { transform: scale(.98); }
+  .btn-ic { font-size: 11px; }
+  .btn-ghost {
+    background: #FFFFFF;
+    border-color: var(--line);
+    color: var(--maroon);
+  }
+  .btn-practice {
+    font-family: inherit;
+    cursor: pointer;
+    background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+    color: #FFFFFF;
+    flex-basis: 100%;
+  }
+  .btn-practice.is-active {
+    background: linear-gradient(180deg, #efe3c5, var(--gold-pale));
+    color: var(--maroon);
+  }
+
+  /* ---------- Practice mini-player ---------- */
+  body { padding-bottom: 60px; transition: padding-bottom .2s ease; }
+  body.has-player { padding-bottom: 130px; }
+  .mini-player {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 50;
+    background: #FFFFFF;
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 20px rgba(80,60,20,.12);
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  }
+  .mini-player[hidden] { display: none; }
+  .mini-player-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .mini-embed {
+    position: relative;
+    flex: 0 0 auto;
+    width: 96px;
+    height: 54px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+  .mini-embed iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+  .mini-info { flex: 1 1 auto; min-width: 0; }
+  .mini-eyebrow {
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .mini-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--maroon);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mini-close {
+    flex: 0 0 auto;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: #FFFFFF;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .quick-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 30px 0 4px;
+    color: var(--maroon);
+  }
+  .quick-sub {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+  .quick-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .quick-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+  }
+  .quick-num { color: var(--muted); font-size: 10.5px; font-weight: 700; }
+  .quick-name { flex: 1; }
+  .quick-ic { color: var(--gold); font-size: 10px; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 34px;
+    padding: 0 20px;
+    line-height: 1.6;
+  }
+  footer strong { color: var(--maroon); }
+  footer .credit {
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #B4A688;
+  }
+
+  @media (min-width: 560px) {
+    header.hero h1 { font-size: 42px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="crest" src="/crest.jpg" alt="Emblema Ilê Asé Karè Oju Igbi">
+  <div class="eyebrow">Material de apoio interno</div>
+  <h1>Cantigas<br>do Xirê</h1>
+  <div class="divider"><span></span><span class="diamond"></span><span></span></div>
+  <p class="sub">Letras, traduções e áudios de referência, organizados por orixá, na ordem do xirê.</p>
+  <div class="terreiro">Ilê Asé Karè Oju Igbi</div>
+</header>
+
+<nav class="toc-wrap">
+  <div class="toc-scroll" id="tocScroll">
+    <a href="#exu" class="chip" style="--dot:#c0392b" data-target="exu"><span class="dot"></span><span class="chip-num">01</span> Exu</a>
+<a href="#ogum" class="chip" style="--dot:#5b6b73" data-target="ogum"><span class="dot"></span><span class="chip-num">02</span> Ogum</a>
+<a href="#oxossi" class="chip" style="--dot:#2f6b3a" data-target="oxossi"><span class="dot"></span><span class="chip-num">03</span> Oxóssi</a>
+<a href="#ossaim" class="chip" style="--dot:#4a7c3f" data-target="ossaim"><span class="dot"></span><span class="chip-num">04</span> Ossaim</a>
+<a href="#omolu" class="chip" style="--dot:#3a3630" data-target="omolu"><span class="dot"></span><span class="chip-num">05</span> Omolu / Obaluaiê</a>
+<a href="#oxumare" class="chip" style="--dot:#7a8f3a" data-target="oxumare"><span class="dot"></span><span class="chip-num">06</span> Oxumarê</a>
+<a href="#nana" class="chip" style="--dot:#5c4a7a" data-target="nana"><span class="dot"></span><span class="chip-num">07</span> Nanã</a>
+<a href="#xango" class="chip" style="--dot:#a6231e" data-target="xango"><span class="dot"></span><span class="chip-num">08</span> Xangô</a>
+<a href="#oya" class="chip" style="--dot:#8a3a24" data-target="oya"><span class="dot"></span><span class="chip-num">09</span> Oyá / Iansã</a>
+<a href="#oba" class="chip" style="--dot:#b5546b" data-target="oba"><span class="dot"></span><span class="chip-num">10</span> Obá</a>
+<a href="#ewa" class="chip" style="--dot:#c98a3a" data-target="ewa"><span class="dot"></span><span class="chip-num">11</span> Ewá</a>
+<a href="#oxum" class="chip" style="--dot:#c9a227" data-target="oxum"><span class="dot"></span><span class="chip-num">12</span> Oxum</a>
+<a href="#logunede" class="chip" style="--dot:#c9a227" data-target="logunede"><span class="dot"></span><span class="chip-num">13</span> Logun Edé</a>
+<a href="#yemanja" class="chip" style="--dot:#1f5c8a" data-target="yemanja"><span class="dot"></span><span class="chip-num">14</span> Yemanjá</a>
+<a href="#oxala" class="chip" style="--dot:#d9d2c0" data-target="oxala"><span class="dot"></span><span class="chip-num">15</span> Oxalá / Oxaguiã</a>
+  </div>
+</nav>
+
+<main>
+  <div class="note">
+    As grafias podem variar de uma fonte para outra. A referência principal deve ser sempre a
+    forma ensinada no terreiro e pelos mais velhos da casa. Toque no nome de cada orixá para
+    abrir as cantigas; toque em <strong>Praticar</strong> para deixar o áudio tocando fixo
+    embaixo da tela enquanto você lê e canta junto.
+  </div>
+
+  
+    <section class="orixa" id="exu" style="--accent:#c0392b; --accent2:#1a1a1a">
+      <button class="orixa-head" data-acc="exu" aria-expanded="false">
+        <span class="orixa-num">01</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Exu</span>
+          <span class="orixa-yoruba">ÈSÙ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Laaróyè Èsù!<br>Egba rà bó ago mojuba rà<br>Egba Kose<br>Egba rà bó ago mojuba rà<br>E mó dé ko e ko<br>Egba rà bó ago mojuba rà<br>Lè gbálè èsù loná<br>Egba rà um be be<br>Tiriri Lona<br>Esú Tiriri Egba rà um be be Tiriri Lona Èsù Tiriri Elegbara</p>
+          <p class="trad">Nos dê entendimento sobre a vida, Exu; tenho fé e peço licença para louvá-lo em minha casa; tenho fé, amém; nossa casa está limpa, proteja a nossa terra; seu poder, Exu, limpa o caminho; minha fé me alimenta, peço, peço; Tiriri — valoroso no caminho, Exu que nos dá coisas no caminho.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 2</div>
+          <p class="lyric">Èsù Ajo<br>A ma ma<br>Ke o Elegbara<br>Èsù Ajo<br>A ma ma Ke o laaròyè<br>Èsù Soroke<br>O dara o dara<br>Ba bá ebó<br>Esú O</p>
+          <p class="trad">Homem da rua; Exu da jornada, nós sempre, sempre pedimos a ti, Elegbara; Exu da jornada, clamamos que nos dê compreensão; Exu que fala alto; ele é justo, ele é justo; ajude-nos, acompanhe-nos; ele é Exu.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 3</div>
+          <p class="lyric">Esú Olona<br>Mó forí Gbále<br>Esú O Gba rá Lò jí ki<br>Esú Lò bi wa<br>Ara e e<br>So so Obé<br>Odara kolobi ebó<br>Laaròyé<br>Àgiri Esú ma na<br>Le lè àgiri</p>
+          <p class="trad">Dono da estrada; limpe o que é ruim, varra; com minha fé lhe cumprimento; Exu venha até nós; faça-se presente; fala, fala na faca; ele é justo e ensina-nos a renascer no ebó; dê-nos compreensão; Exu está presente no nascer da aurora, ele tem força e poder na aurora.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 4</div>
+          <p class="lyric">Àjé ma na<br>Le lè àgiri<br>Fí rò ófè na<br>Fé na jò<br>Àgiri<br>Orisa pa ta<br>Ago nilé<br>Ago nilé mó forí gbále<br>Gbà-là ló jù gbà-là<br>Ló jù gbà-là</p>
+          <p class="trad">Seu feitiço está presente, força e poder na aurora; seu assobio é o primeiro a ser ouvido, se manifeste na aurora; Orixá que nos acode mas pode nos matar; a humanidade em suas casas pede auxílio; livre a humanidade do que é ruim, varra; salve-nos, busque a nossa salvação.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 5</div>
+          <p class="lyric">Ará legbé<br>Ògó Rum Gò<br>Rum gò<br>Laaròyé<br>Ba pàdé olà na e<br>Mojúbà ójisè<br>Àwa se àwo<br>Mojúbá ójisè<br>Elégbára Rewá<br>Àwa se àwo</p>
+          <p class="trad">Fique por perto; te louvamos com o tambor para que não se confunda, o tambor é inconfundível; dê-nos compreensão; esta oferenda servida em prato de barro é para que nos ajude e não nos castigue; salve Exu, o mensageiro, alimente-se em nossa casa de santo; Elegbara é bonito, alimente-se em nossa casa de santo.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 6</div>
+          <p class="lyric">A ji ki rè mi èsù<br>Èsù ka bi, ka bí<br>Elégbára Èsù<br>Osá rere rere<br>O ké Sá bára èsù<br>O Sá rere rere<br>Elégbára, elégbara èsù ará ye<br>Elégbára, elégbara èsù ará ye<br>O wá lè se ìlàjà ba àwo<br>Lè só ri am-nó ìlèkùn</p>
+          <p class="trad">Nós te acordamos para lhe felicitar, meu Exu; Exu que nos acompanha desde o nascimento; Elegbara, Exu que mora no caminho; nós lhe convidamos; nós te chamamos, bom amigo; nós lhe convidamos; Exu Elegbara, Exu que mora no caminho; ele vem com seu poder nos ajudar a harmonizar, com seu poder toma conta da nossa entrada.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 7</div>
+          <p class="lyric">Èsù a jùmò ma ma ké o<br>O dara<br>Laaróyè èsù<br>A jùmò ma ma ké o o<br>O dara èsù àwo<br>O dara. Lò sóro<br>O dara. Lò sóro loná<br>O di se bá lè pón a o o<br>O dara. Bá lè só bá<br>Kòna wù rè já rè o</p>
+          <p class="trad">Exu, nós sempre lhe chamamos; você é justo, dê-nos compreensão; nós sempre lhe chamamos; você é justo, Exu, nós te alimentamos; ele é justo, ouça sua voz durante a caminhada; retorne para nos encontrar e nos fortalecer; ele é justo, ele toma conta e seu poder nos fortalece; te agradamos na encruzilhada, levante-se.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 8</div>
+          <p class="lyric">Èsù loná<br>Ajé ba lè a ká ra wó<br>Èsù Soroke Èsù sórò sórò<br>Ajé ba lè a ká ra wó<br>Èsù só Soroke<br>Elégbára lè ba àwo<br>Èsù só Soroke<br>Èsù só Soroke ki awo<br>Elégbára Vodun Adja ke de ke de<br>Èsù lè ba o</p>
+          <p class="trad">Exu da rua; este sangue de animal que será derramado aqui é para nos ajudar; Exu, venha participar do culto; Exu Soroke tome conta, Elegbára, seu poder nos ajuda; Exu Soroke tome conta, nós te cumprimentamos; tocamos o adja bem alto para lhe chamar, Exu, buscamos o seu poder.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 9</div>
+          <p class="lyric">Odún lè ba o<br>A dí kí ba rà bò e mojúbà<br>Àwa kó jé<br>A dí kí ba rà bò e mojúbà<br>Òmowé kó ikó<br>Kó ké kó ké o ba rà<br>O ba rà ba ba ebo<br>Iná iná e mojúbà e<br>E mojúbà<br>Ibó mojúbà</p>
+          <p class="trad">Está na hora de usar o seu poder; nós tornamos a lhe cumprimentar pela ajuda que recebemos, nós somos aprendizes; Senhor, seja paciente em nos ensinar para que nos tornemos bons trabalhadores; cantamos alto para que venha nos ajudar com os trabalhos, venha em nosso auxílio, venha para o ebó; o fogo das velas é para te saudar, nós te saudamos, no seu altar te saudamos.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 10</div>
+          <p class="lyric">E ma wù lè ba na<br>Kórin ti a<br>E ma wù lè ba na<br>E ma je kí<br>Kórin ti a<br>O loná wa ba rà ketu<br>O loná wa ba rà ketu<br>Ketu ketu e<br>Èsù alaketu<br>Yemonjá ka ká rè bo</p>
+          <p class="trad">Você sempre foi agradado primeiro que os outros, nós cantamos suas cantigas; você sempre foi agradado primeiro que os outros, nós sempre te alimentamos e cumprimentamos, nós cantamos suas cantigas; vós que estais no caminho, venha para o Ketu; Exu, este é o reino de Ketu; Yemanjá recolhe e alimenta a todos em seu reino.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 11</div>
+          <p class="lyric">Èsù ayà abo<br>Yemonjá ka ká rè bo<br>Èsù ayà abo</p>
+          <p class="trad">Exu também encontra amparo; Yemanjá recolhe e alimenta a todos em seu reino.</p>
+        </div>
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="jAiVVy5IVnQ" data-name="Exu">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/jAiVVy5IVnQ?si=MSLduEWFmCseciE9" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-exu.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="ogum" style="--accent:#5b6b73; --accent2:#1a1a1a">
+      <button class="orixa-head" data-acc="ogum" aria-expanded="false">
+        <span class="orixa-num">02</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Ogum</span>
+          <span class="orixa-yoruba">ÒGÚN</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Pà ta ko ri Ògún<br>Ògún Je si je si<br>Ògún a jo e Mariwo<br>Akóró a jo e Mariwo<br>Ògún pà lè pà lona<br>Ògún a jo e Mariwo E ma tù Ye ye<br>Àwa sí Iré Ògún o</p>
+          <p class="trad">Ogun guerreiro toma conta de suas terras; Ògún, nos sustente; Ògún se manifeste com o seu mariwo; Akóró, se manifeste com o seu mariwo; Akóró – qualidade de um Ogun; Ògún mata, tem poder de matar no caminho; Vós sempre anima a nossa vida; animar = reviver; Abra a nossa gira Ògún de Ire; Ire = Cidade da Nigéria.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 2</div>
+          <p class="lyric">E oun jo jo<br>Awa sí Iré Ògún<br>E oun jo jo e oun je je<br>Ògún ní ta ewe rè<br>Ògún ní ta ewe rè<br>A Òsóòsì ko rí a lódè<br>Ògún ní ta ewe rè<br>O ni ko tó ile ògún<br>Akóró umbo bò silé</p>
+          <p class="trad">Dance conosco; Abra a nossa gira Ògún de Irè; Ire = Cidade da Nigéria; Dance conosco, coma conosco; Ògún no fim da tarde quer seu feijão; Ògún no fim da tarde quer seu feijão; Oxossi colhe pra ele, na chuva, lá fora; Ògún no fim da tarde quer seu feijão; Ògún é guardião da nossa terra, nossa casa de santo; Akóró estamos lhe esperando.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 3</div>
+          <p class="lyric">A Ògún Meje Iré<br>Ire Meje Meje Katakata òbí meje<br>Òbí meje àna gbod-ó<br>Katakata òbí meje<br>Òbí meje àna gbod-ó<br>E pà mi Ògún, Ògún pà meje<br>E meje mi òsè<br>E pé lè já pé lè já<br>Ògún Onirè E Aáké lódè koró oun bè lè<br>Akóró o Ògún já koró oun bè lè</p>
+          <p class="trad">Ogun das 7 aldeias de Irè; aqui e lá ele está em 7 lugares; ele está em 7 lugares tomando conta de todos; aqui e lá ele está em 7 lugares; ele está em 7 lugares tomando conta de todos; Ogun mata 7 vezes sem pestanejar, Ogun mata 7 vezes; Ele faz tudo em 7 dias; Seu poder nos protege nas lutas; Pedimos que use as suas armas para vencer nossas lutas; Ogun Akoro pedimos que nos dê forças e nos ajude a vencer nossas lutas.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 4</div>
+          <p class="lyric">Ògún onirè o a koro Onire re gbé de<br>Aáké Ogun Onire ore gbé de<br>Ògún se kó re nde se kó re<br>Ògún se kó re nde se kó re<br>E pá ní òbe Ògún pá ní obé<br>E pá ní òbe Ògún pá ní obé<br>O ni ko tó<br>O ni ko tó nile Ògún<br>O ni awa ba já<br>O ni ko to to ba òbe</p>
+          <p class="trad">Ogun Onire pedimos que traga suas dádivas para este lugar e para nós; Ogun Onire, seu machado atrai forças para nós; Ogun, corte e nos ensine a cortar, atrair e cortar, nos ensine a cortar; Ogun, corte e nos ensine a cortar, atrair e cortar, nos ensine a cortar; Sua faca mata, Ogun, sua faca mata; Sua faca mata, Ogun, sua faca mata; Ele é dono da terra; Ele é o dono da terra e protege a nossa casa; Ele é um guerreiro; Ele é dono da terra e o dono da faca.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 5</div>
+          <p class="lyric">Ògún ni kó to wà layè<br>Mariwo uá e<br>Ògún ni kó to wà layè<br>A wá Akóró e lè a rùn<br>A wá Akóró e lè dun wò<br>Ae, ae, ae, a wá Akóró e lè dun wò<br>Ìjà kwe ìjà kwe ìjà<br>A wá Akóró mi rè<br>Wá Ogun Meje ilé<br>Alagba Meje Meje</p>
+          <p class="trad">Ògún é o dono da terra; Venha com seu Mariwo; Ògún é o dono da terra; Venha nos ajudar Ogun Guerreiro, com seu poder; Venha nos ajudar e nos proteger Ogun Guerreiro; Venha nos ajudar e nos proteger, Ogun Guerreiro; Batalhe na nossa casa, batalhe na nossa casa, batalhe; Ogun, venha até nós; Venha à nossa casa de santo Ogun Meje; Senhor Meje, Meje.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 6</div>
+          <p class="lyric">E mariwo aso<br>E mariwo aso<br>Ògún àgò fi rí rí<br>Ága dé lò wa de a o<br>Ògún àgò fi rí rí<br>Koró ba ga dá<br>Koró ba ga dá<br>Ògún ba ga dá e<br>Ògún ba ga dá<br>Ke kí kí àwa Akóró</p>
+          <p class="trad">A roupa dele é de Mariwo; A roupa dele é de Mariwo; Ògun nos dê licença; Pedimos que saia de seu reino e venha nos encontrar para que possamos vê-lo; Ògun nos dê licença; Lá do alto ele nos ajuda; Lá do alto ele nos ajuda; Lá do alto Ogun nos ajuda; Lá do alto Ogun ajuda; Nós cantamos para salvar Ogun.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 7</div>
+          <p class="lyric">Ke kí kí àwa Akóró</p>
+          <p class="trad">Nós cantamos para salvar Ogun.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="lpIW8bxp52Q" data-name="Ogum">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/lpIW8bxp52Q?si=__MXVM351lLjbjce" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-ogum.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="oxossi" style="--accent:#2f6b3a; --accent2:#1a1a1a">
+      <button class="orixa-head" data-acc="oxossi" aria-expanded="false">
+        <span class="orixa-num">03</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Oxóssi</span>
+          <span class="orixa-yoruba">Ọ̀SỌ́Ọ̀SÌ / ODÈ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Oke, Odè ko ké ma wo!<br>Farahàn rere Fibó<br>Ode Fibó farahàn lewa kosè<br>Omo ode<br>Olu wó kí rí bodè<br>Olu wó kí rí bodè<br>Àwa ní sa Omo odé<br>Ode onise wá<br>E aráiye<br>Ode aréré òkè</p>
+          <p class="trad">Salve o Rei que é aquele que fala mais alto!; Osóòsi Fibó venha nos cobrir com sua bondade; Oxossi, encubra-nos com sua bondade e beleza, amém; Filho do caçador; Cumprimentamos o Senhor Caçador; Cumprimentamos o Senhor Caçador; Venha até nós Filho do Caçador; Venha Grande Caçador; Nós, filhos de santo; O saudamos.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 2</div>
+          <p class="lyric">E Òrisà elo<br>E oun Ofà Akueran<br>Omo ode Ode Ìroko<br>E oun Ofà Akueran<br>E o sí bodè. E o sí bodè<br>Arolè o sí bodè e o sí bodè<br>E o sí bodè<br>Olu o kí rí kí rí bodè<br>Kí rí kí rí bodè<br>Kí já kí já wá rà dé ode yò màa</p>
+          <p class="trad">Ele vem com o vento; Akueran é um caçador; Filho do caçador, Oxossi Iroko; Akueran é um caçador; Nós o saudamos; Nós o saudamos. Nós o saudamos; Nós o saudamos; Queremos encontrar e cumprimentar o Sr. Caçador; Encontrar e cumprimentar o Sr. Caçador; Queremos cumprimentar quem sempre nos ajuda. Ficamos felizes sempre com sua presença.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 3</div>
+          <p class="lyric">Sálo kí ri<br>Wá si lò ko<br>Elo ké re odè àárò lè ló ké re<br>Ode àárò lè ló gbèjà lè ló gbèjà<br>Olu o kí rí kí rí bodè<br>Kí rí kí rí bodè<br>O wá nibó oro odè<br>O ké odara sálo gbé rà<br>Omo odè se rere Ìrokò<br>Se rere wá lò Ibo</p>
+          <p class="trad">Queremos encontra-lo para cumprimenta-lo; Venha para esta terra que é sua; Pela manhã clamamos pelo caçador para que nos proteja com o seu poder; Pela manhã clamamos para que o caçador use seu poder para nos defender; Queremos encontrar e cumprimentar o Sr. Caçador; Encontrar e cumprimentar o Sr. Caçador; O Caçador vem com o vento; O chamamos para que venha nos ajudar para que fiquemos bem; Iroko, filho de caçador, só faz o bem; Ibo, venha fazer o bem em nosso altar.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 4</div>
+          <p class="lyric">Onise wá ra e odè Aréré Lokuere<br>Omo odè se rere Ìrokò<br>Se rere wá lò Ibo<br>Ará wá won ní je kí ofà rè won<br>Ofà rè ye je ní won<br>Ago ofà ní won, a arò ilè ko de wa jo ní gbo o ará wá<br>Won ní je kí ofà rè won<br>Wá ní je ki ofà rè won<br>Oluaiyè a aréré<br>Oluaiyè a ago gbo</p>
+          <p class="trad">Venha até nós grande caçador; Iroko, filho de caçador, só faz o bem; Ibo, venha fazer o bem em nosso altar; O cumprimentamos Senhor da caça. Traga para nós o alimento; Sua caça nos alimenta e nos dá vida; Os filhos de santo batem o Arò para que o caçador venha se manifestar em nossa casa; Agradecemos pela comida que nos dá; Senhor caçador, venha receber nossos agradecimentos pela comida que nos dá; Rei caçador; Rei caçador nós cremos em ti.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 5</div>
+          <p class="lyric">Oluaiyè aréré ago gbo<br>Oló dó bí ewè<br>Oló dó bí ewè bàbá<br>Wá wá lè ko de Omo odè<br>E ati rè okè ní lè imoye<br>O Dana-dana<br>Ti sè eran odè<br>Kí rí kí rí bodè<br>Odè ni o</p>
+          <p class="trad">Rei caçador nós cremos em ti; ele nasceu na mata, o pai gerou seu filho na mata; filho do caçador, venha mostrar seu poder nesta casa; o Senhor caçador tem poder e sabedoria; ele é Dana-Dana, o bom caçador que prepara a sua caça; cumprimentamos ao encontrar o Sr. Caçador, ele é um grande caçador.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 6</div>
+          <p class="lyric">O ní aráiye Ibo si<br>O ní aráiye Ibo si ma lè ké o àjo<br>Ibo si ma wé ki o àjo<br>O ni aráiye odè aréré oké<br>Àwa ní ko de lò ke<br>Odè a pà o eran<br>Àwa ní ko de lò ke<br>Odè a pà o eran<br>Odè bi ewè<br>Odè lò ké o a pà o eran</p>
+          <p class="trad">Ibo atende a todos nós; Ibo atende a todos nós. Podemos contar com seu poder por toda a nossa jornada; Podemos contar com Ibo por toda a nossa jornada; Ele é, para todos, o Rei caçador; Cantamos para ele que fala mais alto; O caçador é quem mata a caça e traz a carne; Cantamos para ele que fala mais alto; O caçador é quem mata a caça e traz a carne; ele nasceu na mata; O rei que fala mais alto é quem mata a caça e traz a carne.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 7</div>
+          <p class="lyric">Odè kí a mò de odè<br>Odè kí a mò de odè<br>Odè aréré<br>Odè kí a mò de odè ni ma wó<br>Odè ki a mò de odè òòni e<br>Ago gbo mi rò òsè mi ro<br>Orò ìmale<br>O si bodè<br>E o si bodè<br>Arolè o si bodè</p>
+          <p class="trad">Nós cumprimentamos o Rei caçador pois o conhecemos; Nós cumprimentamos o Rei caçador pois o conhecemos; Salve o Rei caçador; Nós cumprimentamos e reverendamos o Rei caçador; Nós cumprimentamos o Rei caçador. Ele é o Rei da nação Yorubá; Todos cremos que o nosso ritual é benéfico; Nosso culto é para homenagear e cultuar nossos ancestrais; Ele é o vento; Ele é o vento; Arolè é o vento.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 8</div>
+          <p class="lyric">E o si bodè<br>O ní dá wó<br>O ní dá wwó ní ma lè<br>O ní dá wó lè mimó<br>Ofà mi lò si<br>Abo wá<br>Abo wá là abó<br>Alaketu e<br>Sa lò kun odara<br>Sa lò kun odara</p>
+          <p class="trad">Ele é o vento; ele nasceu para caçar; Ele tem o poder de caçador; Ele tem o poder sagrado de caçador; Ele usa seu arco e flecha; Para nos proteger; Para nos proteger e abrir nossos caminhos; Venha ao Reino de Ketu; Aceite o convite; Aceite o convite.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 9</div>
+          <p class="lyric">Sa lò kun odara Arolè<br>Sa lò kun odara<br>Ma ba isé isé Ìrokò<br>E abo wá e<br>E abo wá<br>Ofà ofà bèru já<br>Ofà ofà bèru já<br>Ofà ofà bèru já ni Ibo<br>Ofà ofà bèru já lò de<br>Àwa ta pà ta pà rò de</p>
+          <p class="trad">Aceite o convite do Rei de Ketu; Aceite o convite; Iroko sempre nos ajuda com os trabalhos; Ele vem nos amparar; Ele nos ampara; O arco e flecha é a sua arma de luta; O arco e flecha é a sua arma de luta; Ibo tem um arco e flecha para lutar; O arco e flecha do caçador é usado para caçar; Nós manuseamos a caça que vai morrer, com respeito.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 10</div>
+          <p class="lyric">Àwa ta pà ta pà àwo<br>Ará ará a we<br>Ajé we lè ajé we lè o dá pà lò si<br>Kí tí kí tí Ibo alé mi rù wa<br>Ódá pà we si Ibo<br>Kí tí kí tí Ibo alé mi rù wa<br>Ale si ko<br>Arolè o inaio ke o ajo</p>
+          <p class="trad">Nós manuseamos a caça que vai morrer para o culto; ela tem dono, por isso a tratamos com respeito; cobrimos a cabeça em respeito às bênçãos do ajé (sangue do animal que cai), que é para nos salvar; cumprimentamos Ibo, que nos salva dos perigos; Ibo nos protege durante a noite e nos protege dos perigos; Rei de Ketu, pedimos que ilumine a nossa jornada.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 11</div>
+          <p class="lyric">O ní aráiye<br>Ke o inaio ke o ajo<br>O ké arò o ké<br>O ké arò<br>Òsè ni bò kun<br>Odè aké lem<br>Odè ilè<br>Okè arò, okè<br>Omo odè Omo kí kí o yo-jáde<br>Omo odè Omo kí kí o yo-jáde</p>
+          <p class="trad">Ele ajuda a toda humanidade; Pedimos que nos ilumine em nossa jornada; Nós te chamamos Oxossi, nós te chamamos; Nós te chamamos; Ajude-nos em nosso ritual; Caçador, traga a sua força; Caçador em nossa casa de santo; Nós te chamamos; Filho do caçador, apareça para que possamos cumprimentá-lo; Filho do caçador, apareça para que possamos cumprimentá-lo.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 12</div>
+          <p class="lyric">Omo odè odè yio ajadi we lè<br>Omo odè odè yio ajadi we lè<br>Siré, siré<br>Odè ma ta òrè òrè<br>Siré, siré<br>Já bè lè okè ílò rò odè ma ta àgo lóna<br>E rere fibo odè Fibo<br>Pè rere Afoxé Omo odè<br>E mò re lè ko lè<br>Omo odè</p>
+          <p class="trad">Filho do caçador, tocamos o adja e danamos em sua homenagem, caçador; Filho do caçador, tocamos o adja e danamos em sua homenagem, caçador; Festa, festa; O caçador sempre confraterniza com os amigos; festa, festa; Com sua licença cantamos e pedimos que confraternize conosco e que sua paz nos alcance; Odè Fibo é encantador; Chamamos o filho do caçador com seu encanto para o Afoxé; Nós conhecemos seu poder sobre a terra; Filho do caçador.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 13</div>
+          <p class="lyric">E odè ma ta<br>E odè lè<br>O ní pepe<br>Siré, siré<br>Odè ma ta òrè òrè<br>E jô jô balé<br>Iná ba ta tó ba lé<br>Aráiye<br>Odè aréré oke<br>E Òrisà rélo</p>
+          <p class="trad">Ele sempre confraterniza; Ele é um caçador poderoso; Ele tem um reino; festa, festa; O caçador sempre confraterniza com os amigos; Ele é o chefe da comunidade e dança; A luz do chefe da comunidade ajuda e ilumina a todos; A humanidade; Saúda o Rei caçador; Ele é um Orixá sedutor.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 14</div>
+          <p class="lyric">E oun ofà Akueran<br>Odè ni tà fasoké<br>Ba lè ode ní tà fasoké<br>E odè aráiye ode pà ra ká de<br>E odè aráiye ode pà ra ká de<br>E wá wá wá odè ní lè àwa<br>Odè kí ni jó<br>Omo odè lóní<br>Omo odè oluayè<br>Odè balè já mi rò</p>
+          <p class="trad">Ele é Oxossi Akueran; O caçador sempre nos ajda; Com seu poder o caçador sempre nos ajuda; O caçador alimenta a humanidade com seus frutos e sua caça; O caçador alimenta a humanidade com seus frutos e sua caça; Caçador venha, venha trazer suas bênçãos para nós; O caçador com sua dança nos cumprimenta; Todo dia é dia do Filho do caçador; Filho do caçador é o Senhor do Mundo; Caçador com seu poder de luta acalma tudo e nos ajuda.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 15</div>
+          <p class="lyric">Odè balè já mi rò<br>E sìn ké lè Arolè<br>E sìn ké lè Arolè<br>E Arole e ma là ko<br>E Arole e ma là kó-lekó</p>
+          <p class="trad">Caçador com seu poder de luta acalma tudo e nos ajuda; Arole nós pedimos a sua ajuda; Arole nós pedimos a sua ajuda; Rei de Ketu sempre nos ensina; Rei de Ketu sempre nos doutrina.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="jF0AMzsJJhw" data-name="Oxóssi">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/jF0AMzsJJhw?si=YDCp40SiPpsy9o5U" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="https://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-ode.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="ossaim" style="--accent:#4a7c3f; --accent2:#1a1a1a">
+      <button class="orixa-head" data-acc="ossaim" aria-expanded="false">
+        <span class="orixa-num">04</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Ossaim</span>
+          <span class="orixa-yoruba">ÒSÁNYIN</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Pèrègún a lá we titun o<br>Pèrègún a lá we titun o<br>Gbogbo pèrègún a lá we lessé<br>À àjá lé o pèrègún lá to ni o<br>Ewè pèrègún lá to ni o<br>A n’sé irúnmolè a ewè àjè bi imolè<br>A ewè kí a jé<br>A wá ku rò yá wá lorí òkun<br>Pèrègún lá to ni o<br>Abebe ni bó wá<br>Abebe ni bó</p>
+          <p class="trad">As folhas frescas do Peregum devem ser manuseadas com respeito; os filhos de santo respeitam as folhas frescas do peregum; tocamos o adjá em homenagem ao peregum, que tem um grande poder; das folhas do peregum nasceu uma mulher encantada que dá a essa folha todo o poder da natureza; nós saudamos suas folhas; ela leva os espíritos da escuridão para outro lugar além do mar; o peregum tem um grande poder; venha com seu grande leque.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 2</div>
+          <p class="lyric">E abebe<br>Abebe ni bó wá<br>Abebe ni bó<br>Àtá koró ojú ewè<br>Àtá koró ojú ododún<br>Àtá koró ojú ewè<br>A lelé koró ojú ododún<br>Àwa orò sìn ma<br>Ódó ro dun<br>Òpeèré Òsányin èhin si búkun rù ide ará ká</p>
+          <p class="trad">Seu leque; Venha com seu grande leque; Com seu grande leque; Veja que a cumieira está com as suas folhas; Veja que uma vez por ano colocamos suas folhas na cumieira; Veja que a cumieira está com as suas folhas; Veja que anualmente cobrimos o chão com suas folhas; Nosso culto sempre homenageia; A presença agradável e doce desse jovem; O pássaro de prata de Ossanhe voa de costas e ela o traz na cabeça. Bendizemos esse espírito que abençoa a colheita de frutas.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 3</div>
+          <p class="lyric">Sawo òpeèré<br>Òpeèré ni o pé were<br>Sawo òpeèré<br>Opé ni o pé sàn gò<br>Mò njá ewè pé mò só<br>Mò njá ewè pé mò só rò<br>E pín ló pé mi<br>E pín ló Yia mi</p>
+          <p class="trad">Veja! O pássaro!; Encontramos o pássaro e o anão; Veja! O pássaro!; à sua presença devemos demonstrar gratidão; Para pegar as folhas temos que encontrar quem toma conta delas; Para pegar as folhas temos que encontrar e acalmar quem toma conta delas; Usamos as folhas que encontramos para remédio; Nossa mãe quem nos ensinou a usar.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="MuRjEAFetNE" data-name="Ossaim">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/MuRjEAFetNE?si=5szyZLzHA-mRZjSy" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-ossaim.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="omolu" style="--accent:#3a3630; --accent2:#c0392b">
+      <button class="orixa-head" data-acc="omolu" aria-expanded="false">
+        <span class="orixa-num">05</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Omolu / Obaluaiê</span>
+          <span class="orixa-yoruba">OMOLU</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Wá to to a jú gbé rò!<br>Dagò lu nà ke wa Saworo<br>Dagò lelé<br>Dagò lu nà ke wa Saworo<br>Dagò lelé<br>Omolu a fá rà we we<br>Fá rà fá rà fá ro<br>Ji ja Pepe<br>E lò obi wa re<br>Tori bóri</p>
+          <p class="trad">Ele é o médico que vem nos acudir; Dê-nos licença para tocar o Saworo para que nos acuda; Pedimos licença humildemente; Dê-nos licença para tocar o Saworo para que nos acuda; Pedimos licença humildemente; Omolu, abençoe as nossas cabeças raspadas e nos livre das doenças; Cobre nossas cabeças raspadas e abençoadas por vós; Venha abençoar nossa altar com sua presença; Venha cortar o Obi que proteje a nossa existência; Por isso fizemos o bori.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 2</div>
+          <p class="lyric">Ji já Pepe Ori Je nà Pà ba<br>O sí e to bò wa lè<br>Ori Je nà Pà ba<br>O sí e to bò wa lè<br>E ké rè nù bé ké rè<br>E ké rè nù bé ké rè<br>E àgò Òmolu já e e lè ní wa bèrè ko<br>E lè ní wa Omolu já e lè ní wa bè rè ko<br>Lá o pè rè ní sò dá<br>Èjó e sò èjó</p>
+          <p class="trad">Aquele que dá vida e saúde às nossas cabeças também pode nos castigar com a morte; Nós te adoramos até a hora da morte pois vós nos acompanha até depois dela; Aquele que dá vida e saúde às nossas cabeças também pode nos castigar com a morte; Nós te adoramos até a hora da morte pois vós nos acompanha até depois dela; Clamamos a vós que nos purifica, clamamos por vós; Clamamos a vós que nos purifica, clamamos por vós; Omolu nos de licença para invocarmos sua força que vem da terra, de onde viemos e para onde iremos; Omolu, vosso poder vem da terra. Dela viemos e para ela voltaremos; Temos em nós a gratidão por ti que nos criastes. Nos purifique; Descarregue-nos e nos livre das doenças.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 3</div>
+          <p class="lyric">E ba aìsan ní mora e<br>Já ba to là ba rè awa<br>Omolu bé wa rà e Omolu bé wa rà o<br>Omolu bé wa rà e Omolu bé wa rà o bò bò<br>E ága ké ba ìwà ága ke ba ìwà<br>E ko lè ko lè saworo<br>Já bè lè ké ajo o fàiyakò<br>Àwa ní ko ajo<br>A dí dà bò loná bè wa asa o orò<br>Àgò ile ìlera bo loná</p>
+          <p class="trad">Esteja junto de nós e nos ajude quando estivermos doentes; Esperamos por sua ajuda nesta nossa luta; Omolu, pedimos que venha nos ajudar nesse início de caminhada; Omolu, pedimos que venha nos ajudar nesse início de caminhada. Salve-nos, salve-nos; Do seu trono respeitoso e humilde ouve nossos lamentos e nos ajude; Seu poder é a terra e o saworo a nossa humildade e respeito para convosco; O seu abraço e sua força nos ajuda e nos protege em nossa jornada; Na nossa jornada pela Terra; Nós o adoramos no tempo e pedimos de novo que venha, como sempre, ao nosso oro; Nós pedimos licença para louvá-lo dentro da nossa casa para que nos socorra.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 4</div>
+          <p class="lyric">Bè wa asa o orò<br>O a jerí loná<br>Ódo bàbá<br>A we ba bè ba yò áwa dokítà<br>Onílè wà<br>Lèsé Òrisá<br>Onilè wà<br>Kòlòbó<br>E kolòbó e kolòbó simi, simi, simi, simi<br>Omolu aráiye ba jeun ba ekó<br>Òní e Omolu ba jeun ba ekó<br>Aloré be we gbérè mí daiyàfò<br>Omolu pè olóre a wù rè a kú abò</p>
+          <p class="trad">Pedimos que venha ao nosso oro; venha com seu capuz de palha ajudar-nos em nosso culto, como médico, para que possamos viver felizes; o Senhor da terra está entre nós que cultuamos Orixá, agradecemos felizes por estar entre nós; em sua pequena cabaça traz remédios para nos livrar das doenças; nós respeitamos a terra que serve para o descanso; adoramos a terra e a usamos com respeito; Omolu, ajude a humanidade (filhos de santo) que se alimenta com ekó; Omolu que cobre a cabeça por causa de sua intensa luz, pedimos ajuda para que nos sustente nessa vida; nos curvamos em respeito e pedimos que venha até nós receber as oferendas que lhe dedicamos; Omolu, seja bem-vindo! Nosso benfeitor! Nós o chamamos para agradá-lo.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 5</div>
+          <p class="lyric">Ja npènpè e lò gbé wà layè_<br>Tó ní gbón mì o<br>Ja npènpè_Omolú wà layè<br>Tó ní gbón mì o<br>Kóró nló áwo, kóró nló áwo se o gbé je<br>Kóró nló áwo, kóró nló áwo se o gbé je<br>O àtà lábé o ko rí<br>O kilò fun àtà lábé o ko ri<br>Abe mi lorí bè ri onilé oluayè<br>O àtà lábé o ko rí</p>
+          <p class="trad">O chamamos para que use suas folhas medicinais para nos socorrer nesta vida; Para o senhor, tocamos o adja o tempo que for preciso; Omolu, o chamamos para que use suas folhas medicinais para nos socorrer nesta vida; Para o senhor, tocamos o adja o tempo que for preciso; estamos indo ao culto, estamos indo ao culto para receber sua ajuda; estamos indo ao culto, estamos indo ao culto para receber sua ajuda; Ele fica embaixo da cumieira, na terra, que é de onde ele nos assiste; De lá ele nos avisa dos perigos, embaixo da cumieira, na terra, que é de onde ele nos assiste; Dono da terra, Senhor do mundo que está acima de nós; Ele fica embaixo da cumieira, na terra, que é de onde ele nos assiste.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 6</div>
+          <p class="lyric">Lo ní aló ìyìn gè ni a<br>Aja kunlowo ìyìn gè ni a<br>O àtà lábé o ko rí<br>Ajunsun, aráiye lorí Ìyìn gè ni a<br>Ewá kalo<br>Sakpata, ewá kalo<br>Ìyìn gè ni a<br>A ìyìn gè ni a ágo ìyìn gè ni a<br>A kalo a Ìyìn gè ni a<br>Ago nile ní lè ma dagò</p>
+          <p class="trad">Hoje, nossas mãos estão postas em seu louvor; O Adja nos ajuda a louvá-lo; Ele fica embaixo da cumieira, na terra, que é de onde ele nos assiste; Ajunsun, vós que estais acima de nós. Te louvamos e reconhecemos seu valor; Sua luz nos guia; Sakpata, sua luz nos guia; Nós reconhecemos seu valor e o louvamos; A humanidade o elogia e o louva. Nós o louvamos e o elogiamos; Nós reconhecemos seu valor e o louvamos. Caminhamos com sua luz; A humanidade lhe pede licença pelo seu poder.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 7</div>
+          <p class="lyric">Sakpata, Ajunsun ma dagò<br>Ago ní lè ma dagò<br>Gbé lè iko o àtà lábé o ko rí<br>Gbé lè iko o àtà lábé o ko rí<br>We lè iko sa là sa là re o ní<br>We lè iko sa là sa là re o ní<br>O ìyìn gè ni a pàdé o ló ri pà<br>O ìyìn gè ni a pàdé o yò ló ri pà<br>Opè ma díjo père ké se<br>Ma díjo hàn ma díjo pè</p>
+          <p class="trad">Sempre pedimos licença para Sakpata e Ajunsun; A humanidade lhe pede licença pelo seu poder; Pelo seu poder, colocamos a decisa em baixo da cumieira, na terra, para receber sua ajuda; Pelo seu poder, colocamos a decisa em baixo da cumieira, na terra, para receber sua ajuda; Sua cabeça é coberta com palha para ofuscar a sua luz e seus mistérios por isso ela não pode ser aberta; Sua cabeça é coberta com palha para ofuscar a sua luz por isso ela não pode ser aberta; Nós o louvamos e bendizemos juntos para que afaste de nós a morte; Nós o louvamos e bendizemos juntos com nossa alegria, para que afaste de nós a morte; Sempre cantamos alto e juntos somente para agradecer; Sempre juntos nos manifestamos, sempre juntos o chamamos.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 8</div>
+          <p class="lyric">Opè ma díjo père ké se<br>Ma díjo hàn ma díjo pè<br>Do hàn a do hàn a yèpè<br>Bè lè iko sa láré o kórin<br>Omolu ki bè hù já<br>O lò gbo sè a jeum bó<br>O lò gbo sè a jeum bó ro e<br>O ìyìn gè ni a Baba sí e bò ale</p>
+          <p class="trad">Sempre cantamos alto e juntos somente para agradecer, sempre juntos nos manifestamos, sempre juntos o chamamos; juntos nos manifestamos para vós, na terra; cantamos para que sua poderosa luz, que sua palha esconde, nos ajude; Omolu, o cumprimentamos e pedimos uma boa colheita; nós cozinhamos e nos alimentamos com fé em ti, que nos tranquiliza; nós o louvamos e o glorificamos, Pai das doenças contagiosas, nós o adoramos e o recebemos.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 9</div>
+          <p class="lyric">Umbó àlejò<br>E jò àlejò<br>E jò àlejò<br>Áfaradà lè jé hù lelé<br>Omolú to lè kè eran ènia<br>E rò e rò ékun<br>O ni e mò ri ba mejá ké<br>Olodè ayè mò ri ba mejá ké ké<br>Obalúwàiyé mò ri ba mejá<br>Ké ké olodè ayè</p>
+          <p class="trad">As visitas estão chegando e dançam para vós; esperando resignados que o seu poder, que está embaixo da cumieira, possa beneficiá-los; Omolu, clamamos para que seu poder atue em nossos corpos, estamos de joelhos para que nos cure; clamamos por vós, Senhor que está onde o céu alcança, para que venha nos ajudar com sua luz brilhante; Obaluaê, venha nos ajudar com sua luz brilhante.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 10</div>
+          <p class="lyric">Akan ki fá bó a<br>Akan ki fá bó a o<br>Ki nibí fá rò fá rò ti<br>Ki ní bi fá rò áfaradà<br>O ki ní pokó<br>O ní e<br>Ki nibí wa áfaradà<br>Omolú to lè kúnlè rò e lò lò ékun<br>Omolú to lè kúnlè rò e lò lò ékun<br>Omolú to lè kúnlè rò e lò lò ékun</p>
+          <p class="trad">Cumprimentamos e adoramos vossa luz que chega até nós pouco a pouco; Cumprimentamos e adoramos vossa luz que chega até nós pouco a pouco; Louvamos neste lugar, o médico que, resignado, sempre nos atendeu; Louvamos o médico que sempre nos atende com resignação; O que tem no seu copo feito de casca de coco; Dá para todos; Sua resignação é digna de louvor nesta casa; Omolu, aguardamos de joelhos o seu poder para sermos abençoados por vós; Omolu, aguardamos de joelhos o seu poder para sermos abençoados por vós; Omolu, aguardamos de joelhos o seu poder para sermos abençoados por vós.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 11</div>
+          <p class="lyric">Ni a lò ìyìn gè ni a<br>Aja ko to lò ìyìn gè ni a oluayè<br>O ata lábé o ko rí<br>Béèni ko rí bè rí o ni je oluayè<br>O àtè lábé o ko rí<br>Hù lò hù lò<br>Onilé bè lè bè ko o</p>
+          <p class="trad">È para vós os nossos louvores; Tocamos o adja o tempo que for necessário para louvar e glorificar o “dono do mundo”; Glorificamos sua força e colocamos a decisa embaixo da cumieira em sua homenagem para que venha nos ajudar; Molhamos a terra para ver brotar o nosso alimento que vem com as bênçãos do “dono do mundo”; Colocamos a decisa embaixo da cumieira em sua homenagem e para que venha nos ajudar; Usamos os frutos que a terra dá. Usamos os frutos que a terra dá.; Dono da terra pedimos que sua força mantenha a nossa terra sempre fértil.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="OmjQ3pQubBI" data-name="Omolu / Obaluaiê">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/OmjQ3pQubBI?si=fb7qz6_o6HotEIXk" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-omolu.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="oxumare" style="--accent:#7a8f3a; --accent2:#c9a227">
+      <button class="orixa-head" data-acc="oxumare" aria-expanded="false">
+        <span class="orixa-num">06</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Oxumarê</span>
+          <span class="orixa-yoruba">ÒṢÙNMÀRÈ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Arò bó bò Yí!<br>Òsunmarè lelé mo rí Òsunmarè<br>Lelé mo rí rà ba ta<br>Lelé mo rí Òsunmaré<br>Ódí náà léwà<br>Léwà léwà e<br>Ódí náà léwà<br>Léwà léwà e<br>O bi òjò birí bò<br>O mió aráiye<br>Jô ma ndi o pe</p>
+          <p class="trad">Neste dia que nasce lhe rendemos graças; Oxumarê encontra-se andando no chão, é preciso saber encontrá-la, pois ela se esconde — tenha cuidado por onde anda para não pisá-la; ela é teimosa, mas também é bela; ele surge através de pequenas gotas de chuva, água doce que sustenta a humanidade; ele sempre vem quando o chamamos.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 2</div>
+          <p class="lyric">Jô ma ndi o pe<br>E sìn a bebe ko e dìde<br>E sìn a bebe ko e dìde<br>O dí ma dí ma<br>Òsunmarè aidan<br>Ma sán rí ma sa ibó<br>E e e o fi-ko fi opè<br>Arò bó bò yí! U nké lè sìn<br>A ni wère lókan<br>Àwa e kó oribande</p>
+          <p class="trad">Ele sempre vem quando o chamamos; Nós adoramos sua dança e seu ato de ir ao chão e depois se levantar; Nós adoramos sua dança e seu ato de ir ao chão e depois se levantar; Ele sempre foi, sempre foi; Oxumare sempre foi belo; O céu é um lugar de adoração; Devemos olhá-lo com respeito e dar graças; Aróbò bò yi louvamos e cultuamos sua força; Vós sois um jovem bravo!; traga para nós a boa sorte.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 3</div>
+          <p class="lyric">E hàn oribande<br>Àwa bí a ma gbo ji bè<br>E ba kú èwe lè<br>Arò bó bò yí! A bo mojúbà a wù rí ko kun<br>A ro lè<br>A lè a lè a pà ra dà<br>A lè a lè apà ra o<br>Wù lè ké wá o jó rí o<br>Wé wé ké<br>Wá o jó rí o</p>
+          <p class="trad">A sua presença nos traz a boa sorte; A cada dia que despertamos damos graças para que, assim como o dia que nasce, tenhamos também nossas vidas renovadas; a cada dia que nasce, nossas vidas possam ser renovadas com a sua força; Nós o adoramos! Mojubá! Nós o reverendamos quando vemos o arco-íris; Nele encontramos sua força; Seu poder e sua força o permite ficar invisível; Ele pode estar caminhando ao nosso lado sem que possamos vê-lo; Cantamos para louvar sua força e agrada-lo. Venha dançar para que possamos vê-lo; Rola, rola e dança; Vem dançar para que possamos vê-lo.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 4</div>
+          <p class="lyric">Ké ké dá lè mi ìran lê wá<br>Ké ké dá lè mi ìran lê wá<br>Òsunmaré lè lê ma rì<br>Lè lê ma húwà ara ká<br>Lè lê ma rè Òsunmaré<br>Ko bé jijó<br>Òsunmaré ko bé jijó<br>Ara ká ko bé jijó<br>Lesse Orisà<br>Lesse ko ma fò</p>
+          <p class="trad">Cantamos, cantamos para que traga sua força até nós que somos sua família; Cantamos, cantamos para que traga sua força até nós que somos sua família; Òsunmaré é poderoso; Ele pode enrolar o corpo com seu poder; Você é poderoso Òsunmaré; pedimos que dance indo até o chão; Òsunmaré, pedimos que dance indo até o chão; Pedimos que dance em torno de si mesma indo até o chão; Somos filhos de Orixá; Os filhos de Orixá mantém o chão sempre lavado.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 5</div>
+          <p class="lyric">Sá ro ho<br>Lesse Orisà<br>Lesse ko ma fò<br>Sá ro ho<br>Òsunmaré ló ké rè Òsunmaré<br>Òsunmaré se umbó<br>Se umbó<br>O se umbó<br>Wá là koró léhìn ni<br>Wá là koró léhìn ni</p>
+          <p class="trad">Para que você possa dançar no chão e não se ferir; Somos filhos de Orixá; Os filhos de Orixá mantém o chão sempre lavado; Para que você possa dançar no chão e não se ferir; Òsunmaré, cantamos para sua despedida O ló ké rè (Cantamos para ele se despedir; Òsunmaré está presente; Está presente; Ele está presente; Ele está escondido, venha para este lugar; Ele está escondido, venha para este lugar.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 6</div>
+          <p class="lyric">Òsunmaré ní fe run dá dán<br>Ní fé run dá dán<br>O ba hàn si o kun<br>Àlejò, Àlejò<br>O ba hàn si o kun<br>Ba hàn, ba hàn si o kun<br>Suré, e suré<br>Ba hàn, ba hàn si o kun<br>Arò bó bò yí! Aké lè sí<br>O hun jé lè iko kun</p>
+          <p class="trad">Òsunmaré é uma luz brilhante que gostamos de ter; É uma luz brilhante que gostamos de ter; Mostre seu arco-íris e venha nos ajudar; Venha nos visitar, venha nos visitar; Mostre seu arco-íris e venha nos ajudar; Mostre seu arco-íris e venha nos ajudar; Nos abençoe, nos abençoe; Mostre seu arco-íris e venha nos ajudar; Arò bó bò yí! Ele tem um machado para nos proteger; Sua palha da costa é colorida (as cores representam seu poder.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 7</div>
+          <p class="lyric">U Vodun nos adó dé<br>Arò bó bò yí! Aké lè sí e u jé lè Vodun jé<br>E ara ká ló bó ro<br>Àwa dé wò<br>Òsunmarè àwa dé wó<br>Vodun àwa dé wò<br>Òsunmarè o<br>A ma rà ka lódódun<br>Àtà te lówó<br>Òsunmarè o</p>
+          <p class="trad">Ele é Orixá e nos abençoa com adó (comida feita com pipoca e azeite doce; Arò bó bò yí! Ele tem um machado para nos proteger e nos curvamos ao poder que tem esse Orixá; Vosso corpo vai se enrolando até o chão; Nos curvamos para que nos abençoe; Osunmarè enrola o corpo e vai até o chão; Curvamo-nos a este Orixá para que nos abençoe; Ele é Òsunmarè; Uma vez ao ano nos curvamos; Na cumieira pedindo fartura para o ano todo; Para Òsunmarè.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 8</div>
+          <p class="lyric">A ma rà ka lódódun<br>Àtà te lówó<br>Òsunmarè o<br>Òòni se wá<br>Òòni se wá<br>O dá bo<br>Ajelé lù wè<br>Òrisà ta bè lò<br>Vodun tata un dé<br>E dan, dan, dan</p>
+          <p class="trad">Uma vez ao ano nos curvamos; Na cumieira pedindo fartura para o ano todo; Para Òsunmarè; Orixá Rei da nação Yorubá venha nos ajudar; Orixá Rei da nação Yorubá venha nos ajudar; O Senhor nos orienta e nos ajuda; Governador, venha nos consagrar; Pedimos que nos ilumine; Orixá chefe, cubra-nos; Ele é uma serpente, serpente, serpente.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 9</div>
+          <p class="lyric">Jó árin da ji dan</p>
+          <p class="trad">Ele é uma serpente criada e dança e torno do asè.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="kDXrK0uv4rk" data-name="Oxumarê">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/kDXrK0uv4rk?si=IEb2Rihn2sLvei43" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-oxumare.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="nana" style="--accent:#5c4a7a; --accent2:#e8e0f0">
+      <button class="orixa-head" data-acc="nana" aria-expanded="false">
+        <span class="orixa-num">07</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Nanã</span>
+          <span class="orixa-yoruba">NÀNÁ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Yìn Nàná yò<br>O lù obó<br>Nana Yò<br>Yìn Nàná yò<br>O lù obó<br>Nàná Yò<br>O ko lodò sìn sa lè wá<br>A rìn kú ma oun rè<br>O ko lodò sìn sa lè wá<br>A rìn kú ma oun rè</p>
+          <p class="trad">Nanã fica feliz ao ser glorificada; Tocamos para homenageá-la; Nana fica feliz; Nanã fica feliz ao ser glorificada; Tocamos para homenageá-la; Nàná fica feliz; Ela está na terra úmida do rio. Traga seu poder até nós; Para todos nós que caminhamos sempre em direção à morte; Ela está na terra úmida do rio. Traga seu poder até nós; Para todos nós que caminhamos sempre em direção à morte.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 2</div>
+          <p class="lyric">Sa là wá jo<br>Olu wò kú ké wá jo<br>Sa là wá jo<br>Olu wò kú ké wá jo<br>Oloré<br>Eni ko ri bobò<br>Ki àwa lè Omo nilè ko rá ajo<br>Nàná Yìn kú re Omo nilè ko rá àjo<br>Ko rá jo, ko rá jo<br>O fé le lè</p>
+          <p class="trad">Cantamos para que venha rogar por nós; Curvamo-nos e clamamos Senhora para que venha nos proteger da morte; Cantamos para que venha rogar por nós; Curvamo-nos e clamamos Senhora para que venha nos proteger da morte; Nossa benfeitora; Veja todos que estão na esteira; Nós, os filhos desta casa saudamos sua presença e seu poder neste lugar e em nossas vidas até o fim; Os filhos desta casa pedem à Nana que nos ajude em nossa jornada até depois da morte; Em nossa jornada até o fim da vida; Seu amor e seu poder são capazes de nos acompanhar até depois da morte.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 3</div>
+          <p class="lyric">Nàná kú ré<br>Omo nilè ko rá àjo<br>O dí Nàná e wá léwà e<br>O dí Nàná e wá léwà e<br>E Nàná oluaye<br>We pà pà<br>A là yá jo olu ódo<br>Ké wá jo<br>Abi ma ma kú ma ka ode oribande<br>Abi ma ma kú ma ka ode oribande</p>
+          <p class="trad">Nos ajude Nana até depois da morte; Os filhos da casa pedem sua ajuda até depois da morte; Nana, venha até nós com sua grandeza; Nana, venha até nós com sua grandeza; Nana é a Senhora do mundo; Proteja-nos da morte, morte; Grande Senhora, a sua presença nos encoraja; Cantamos para que se manifeste; Do nascimento até à morte estás ao nosso lado e em qualquer caminho nos trazendo sorte; Do nascimento até à morte estás ao nosso lado e em qualquer caminho nos trazendo sorte.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 4</div>
+          <p class="lyric">Àwa o lò bí ma a yo olokó<br>Nàná yò<br>Nàná yiá ko lodò<br>Nàná Òrisà<br>Nàná e Nàná yò<br>Nàná yiá ko lodò<br>O dí Nàná Yò<br>Obìnrin sá sá o lódè<br>Obìnrin sá sá<br>O dí Nàná Yò<br>Nàná yò olu odò se se</p>
+          <p class="trad">Podemos sempre fazer uso de sua lança para obter felicidade; Nanã nos traz felicidade; Nanã é a Senhora do solo úmido, Nanã é Orixá; ela é a Senhora que vive onde a terra é úmida, a convidamos para que entre; Nanã nos traz felicidade, ela é a Senhora do rio e da criação.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 5</div>
+          <p class="lyric">Ibiri odara ódo se àwa rè<br>Nàná olu odò<br>Olu ase Yìn se yìn<br>Ibiri odara ódo se àwa rè<br>Ko mò rè dìde<br>Ibiri odara ódo se àwa rè<br>A yìn saalare<br>A ikú wò lò se<br>A yìn saalare<br>A ikú wò lò se</p>
+          <p class="trad">O Ibiri é o ornamento que ela carrega sempre para fazer o bem; Nanã é a Senhora do rio; saudamos a força desta Senhora; venha de sua morada nos abençoar com seu conhecimento; Nanã é a Senhora do rio; saudamos Nanã, curvamo-nos a ela que nos ajuda até a hora da morte.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 6</div>
+          <p class="lyric">O yiá wá ore o ni a yiá lodè<br>Ni odún ké dá tí ba bá rè ibó ni-ori ma<br>Lodè domi ibó Yìn ibò<br>O ní se saalare se yiá lodè ilú yìn<br>E Nàná e wá o</p>
+          <p class="trad">Sua presença é uma dádiva, grande Senhora que vive nas terras úmidas; cantamos alto para que nosso clamor seja ouvido em seu reino, que está muito acima de nós; saudamos o seu reino, que está onde a terra é úmida; glorificamos Nanã, a Senhora que nos dá o sopro da vida e vive nas terras úmidas; Nanã, faça-se presente para acompanhar nosso culto com a sua força de criação.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="drQ_jzGm3c8" data-name="Nanã">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/drQ_jzGm3c8?si=rKxXN5gri-4rI6qN" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-nana.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="xango" style="--accent:#a6231e; --accent2:#e8e0d0">
+      <button class="orixa-head" data-acc="xango" aria-expanded="false">
+        <span class="orixa-num">08</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Xangô</span>
+          <span class="orixa-yoruba">ṢÀNGÓ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 1</div>
+          <p class="lyric">Ikitê re o lokê odô<br>Oba lajô<br>Oba tani, Oba lelwuo<br>Oba laieo</p>
+          <p class="trad">Cantiga de exaltação ao Rei de Kossô; grafia fonética conforme a fonte.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 2</div>
+          <p class="lyric">Oba ní sà rè lóòkè odó<br>Ó bé rí omon<br>Oba ní sà rè lóòkè odó<br>Oba Kòso ayò</p>
+          <p class="trad">Louvor à força e à autoridade de Xangô, o Rei de Kossô.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 3</div>
+          <p class="lyric">Oba sá rewa<br>E o jejé<br>Koto koto awo de se<br>Oba sá rewa</p>
+          <p class="trad">Louvor ao rei belo e justiceiro.</p>
+        </div>
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="qeB4xQsQddQ" data-name="Xangô">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/qeB4xQsQddQ?si=2h7k4_mZj_EwXmiI" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="https://joiamisticalaroye.com.br/cantigas/" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="oya" style="--accent:#8a3a24; --accent2:#d9b48f">
+      <button class="orixa-head" data-acc="oya" aria-expanded="false">
+        <span class="orixa-num">09</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Oyá / Iansã</span>
+          <span class="orixa-yoruba">ỌYA / ÌYÁNSÁN</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 1</div>
+          <p class="lyric">Ọyá Balé láàrin yò<br>Ọyá Balé<br>Àdá má dé pà rà gan bẹ̀ hẹ̀</p>
+          <p class="trad">Oyá Balé: ficamos felizes com sua presença. Pedimos que elimine o mal.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 2</div>
+          <p class="lyric">Ajé mito ti Yao<br>Ajé mito ti Ọya<br>Aé aé aé<br>Ajé mito ti Ọya</p>
+          <p class="trad">Refrão de saudação à guerreira dos ventos; grafia fonética.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 3</div>
+          <p class="lyric">Ọyá koro un le, o guerê gue<br>Sábà koro un lá, o gará ga<br>Omo obiri s&#x27;ala koro un le<br>E L&#x27;Ọyá kobé lá jo e L&#x27;Ọyá</p>
+          <p class="trad">Cantiga de louvor à força feminina e guerreira de Oyá; grafia fonética.</p>
+        </div>
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="aP5xDY1vsdk" data-name="Oyá / Iansã">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/aP5xDY1vsdk?si=nJfgEE3ST4Qd2mdb" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-oya.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="oba" style="--accent:#b5546b; --accent2:#f0d8dc">
+      <button class="orixa-head" data-acc="oba" aria-expanded="false">
+        <span class="orixa-num">10</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Obá</span>
+          <span class="orixa-yoruba">ỌBÀ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 1</div>
+          <p class="lyric">Ọbà kò rẹ̀ sí!<br>Ọbà ní Ọya!<br>Ọbà Elekó a já osí!<br>Ọbà òsì, Ọbà òsì!</p>
+          <p class="trad">Cantiga de saudação à força da rainha guerreira Obá. Grafia publicada na descrição da fonte.</p>
+        </div>
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="NMIu8Tip2q8" data-name="Obá">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/NMIu8Tip2q8?si=y4kx5rVPq1cz3ARf" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="https://www.youtube.com/watch?v=lwAMuwGRvIY" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="ewa" style="--accent:#c98a3a; --accent2:#f2d9a8">
+      <button class="orixa-head" data-acc="ewa" aria-expanded="false">
+        <span class="orixa-num">11</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Ewá</span>
+          <span class="orixa-yoruba">YEWÁ / EWÁ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 1</div>
+          <p class="lyric">Ewá Ewá majô<br>Ewá Ewá, Ewá Ewá majô<br>Koiô, koiô Ewá lésé<br>Ewá Ewá majô, Ewá Ewá</p>
+          <p class="trad">Cantiga de louvor a Ewá; grafia fonética conforme a fonte.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 2</div>
+          <p class="lyric">Ewá Ewá, onin operê<br>Ewá Ewá, onin operê ô<br>Ewá Ewá, onin operê<br>Ewá Ewá, onin operê ô</p>
+          <p class="trad">Refrão de chamada e reverência a Ewá.</p>
+        </div>
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="y2aR8SJJ2GY" data-name="Ewá">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/y2aR8SJJ2GY?si=FOiY_C0iTanPXrAJ" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="https://joiamisticalaroye.com.br/cantigas/" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="oxum" style="--accent:#c9a227; --accent2:#3a3020">
+      <button class="orixa-head" data-acc="oxum" aria-expanded="false">
+        <span class="orixa-num">12</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Oxum</span>
+          <span class="orixa-yoruba">ÒṢUN</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Ye, ye, ye, ye,ye o<br>Oro mi wá<br>Nù àse tori e fò<br>Yìn se kó-jùlo Iyagba o<br>Oro mi wá<br>Nù àse tori e fò<br>A mu Ìyà mu ìyà<br>Ojá re e lè mò so tori e fò</p>
+          <p class="trad">A elogiamos, elogiamos...; Traga riqueza para nós; A força de suas águas lava e limpa tudo; Glorificamos a grande mãe que nos cria; Traga riqueza para nós; A força de suas águas lava e limpa tudo; Ajude-nos mãe, ajude-nos mãe; Seu ojá a enfeita e representa seu poder de limpar tudo com as águas.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="Mleg8rrC6d4" data-name="Oxum">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/Mleg8rrC6d4?si=PC60UndUvkwSJSVa" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-oxum.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="logunede" style="--accent:#c9a227; --accent2:#2f6bb0">
+      <button class="orixa-head" data-acc="logunede" aria-expanded="false">
+        <span class="orixa-num">13</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Logun Edé</span>
+          <span class="orixa-yoruba">LÒGÚN EDÉ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        <div class="cantiga">
+          <div class="cantiga-tag">Cantiga 1</div>
+          <p class="lyric">Kerê kerê odé ô, kerê kerê odé ô<br>Oluwo orisá kemí máxa kemí mó wo<br>Orisá odé igbô otôcàn xoxo<br>Awa omodé ti Inrilé<br>Awa omodé ti okuerã<br>Odé igbô tí kolá<br>Babá odé igbô ofá</p>
+          <p class="trad">Louvor ao príncipe caçador das águas. A grafia é fonética, com referências ao caçador, à mata e ao ofá.</p>
+        </div>
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="GdP4-a6wOI0" data-name="Logun Edé">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/GdP4-a6wOI0?si=X8Nzoz5WUYw5cnJg" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="https://joiamisticalaroye.com.br/cantigas/logun-ede-kere-kere-ode/" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="yemanja" style="--accent:#1f5c8a; --accent2:#d8e8f2">
+      <button class="orixa-head" data-acc="yemanja" aria-expanded="false">
+        <span class="orixa-num">14</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Yemanjá</span>
+          <span class="orixa-yoruba">ÌYEMỌJA / IYEMONJÀ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">Iyemonjá wá abó a yò<br>Iyemonjá wá abó a yò</p>
+          <p class="trad">Venha Yemonjá nos trazer felicidade e amparo; Venha Yemonjá nos trazer felicidade e amparo.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="fblQv6RzkzI" data-name="Yemanjá">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/fblQv6RzkzI?si=-rBpoj8Aojq84ZF5" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-yemanja.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orixa" id="oxala" style="--accent:#d9d2c0; --accent2:#1a1a1a">
+      <button class="orixa-head" data-acc="oxala" aria-expanded="false">
+        <span class="orixa-num">15</span>
+        <span class="orixa-titles">
+          <span class="orixa-nome">Oxalá / Oxaguiã</span>
+          <span class="orixa-yoruba">ÒÒṢÀÁLÁ</span>
+        </span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="orixa-body">
+        <div class="orixa-body-inner">
+          
+        
+<div class="cantiga">
+          <div class="cantiga-tag">Trecho 1</div>
+          <p class="lyric">E rìn lè wá<br>A ba wá okàn<br>E lè dùn se ìpadé siré<br>Koró lè koró lè Bàbá Ifá<br>Be wi rò ko Ájàlá<br>Bàbá o ké di am-nó re ki Ájàlá<br>Be wi ro ko<br>A jagun ná<br>A jagun ná Bàbá o<br>A jagun ná</p>
+          <p class="trad">Sua energia se aproxima de nós; Ela vem de encontro ao nosso coração; Sua energia torna a nossa festa agradável; Bàbá Ifá, traga sua energia a este lugar; Oxalá, suplicamos que venha nos trazer a paz; Pai Supremo, saudamos a sua misericórdia, saudamos Oxalá; Suplicamos que venha nos trazer a paz; Ele é o primeiro de todos os guerreiros; O Pai é o primeiro de todos os guereiros; Ele é o primeiro de todos os guerreiros.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 2</div>
+          <p class="lyric">Elemaxó Bàbá Olorogun<br>A jagun ná Bàbá o<br>Elemaxó Bàbá Òsògìnyón<br>Òrisà rè wà<br>Mò rò Bàbá e ye<br>Mò rò Bàbá nilè wá o<br>Mò rò Bàbá ekún ayè<br>Olorum a ki ba se o<br>E Bàbá o ní<br>Olorun a ki ba se</p>
+          <p class="trad">Ele é o sacerdote supremo no Olorogun; O Pai é o primeiro de todos os guereiros; Oxaguiã é Sacerdote supremo; Orixá, venha até nós; Pai, queremos sua paz em nossa vida; Pai, queremos que traga a sua paz à nossa casa; Pai, queremos que traga do céu a sua paz e sua espada; Olorun é o nosso Criador, o saudamos e pedimos sua ajuda; Ele é o Pai Todo Poderoso; Olorun é o nosso Criador, o saudamos e pedimos sua ajuda.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 3</div>
+          <p class="lyric">O fìlà álá e o<br>Ile Ile àwa<br>E Bàbá álá e o<br>Ile Ile àwa<br>Olu o olu o<br>O ní álá<br>E ní Bàbá jo Òsòginyón<br>E ní Bàbá jo Òsòlúfón<br>Èrò Bàbá mi se ro<br>Èrò mi Bàbá kojáde</p>
+          <p class="trad">Cobrimos nossas cabeças com o Alá; E a nossa casa de santo; Pai, cobrimo-nos com o Alá; E a nossa casa de santo; Ele é o Senhor, Ele é o Senhor; Ele é o dono do alá; Venha até nós Pai Oxaguiã; Venha até nós Pai Oxalufã; O amor do Pai está em mim; Elevamos o pensamento ao nosso Pai.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 4</div>
+          <p class="lyric">E mi re mi re<br>Bàbá mo rí aba ódó<br>Álá só rí àwa o<br>Yò Onirè mi dé<br>Bàbá mó duro<br>Aráiye Bàbá unje je<br>Bàbá mó rí o<br>Bàbá o ké e ye ba<br>E ye ba lò ódó</p>
+          <p class="trad">Vós que sois de todos Bàbá Olorum (Deus Pai; Os jovens e os idosos querem lhe encontrar; Estendemos o Alá para que, debaixo dele, sejamos abençoados; Estamos satisfeitos com a boa sorte que nos dá; Pai, esperamos sua compreensão; A *humanidade come da sua comida; *comunidade espírita; Pai de sabedoria, venha nos encontrar; Pai Supremo, cantamos pedindo sua ajuda para viver; Ajude-nos a viver com a alegria da juventude.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 5</div>
+          <p class="lyric">A Irè, A Irè Bàbá a Irè<br>A Irè Bàbá<br>Bàbá o dé òrún e<br>E Bàbá o dé Bàbá o dé e o<br>Ojo bo dí ojo álá e ojo<br>Ojo bi wá e<br>Ojo bo dí ojo álá e ojo<br>Ojo bi wá e<br>Wá Bàbá, Bàbá o<br>Ojo bo dí ojo álá e ojo</p>
+          <p class="trad">Ele é o Pai Supremo de Irè; Ele é o Pai Supremo de Irè; Pai, o seu céu nos encobre; Pai, o vosso céu encobre a todos nós; No dia de recebê-lo, cobrimo-nos com o Alá; Ele vem com o nascer do dia; No dia de recebê-lo, cobrimo-nos com o Alá; Ele vem com o nascer do dia; Ele é nosso ai, venha até nós Pai; No dia de recebê-lo, cobrimo-nos com o Alá.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 6</div>
+          <p class="lyric">Là álá aráiye Bàbá wá lè kú e<br>E Bàbá wá lè kú e<br>Álá o álá<br>Orò álá<br>E ye Bàbá ba<br>Álá fùn kí kí àwa là<br>Bàbá oun re<br>Òrisà òrè Òrisà òrè umbó<br>Álá adun re ajo<br>Ájàlá wò rí wò rí mò yo</p>
+          <p class="trad">Nós abrimos o Alá para que o Pai venha trazer o seu poder e nos revitalizar; Pai, traga-nos o seu poder para nos revitalizar; Alá, o pano que dignifica os Orixás; Nosso culto tem o Alá; Pai, acompanhe-nos durante a nossa vida; Abrimos o Alá para dar boas vindas; Ao Pai de Todos; Orixá amigo, orixá amigo está chegando; A proteção do Alá torna a nossa vida agradável; Curvamo-nos diante de Oxalá, curvamo-nos e ficamos felizes com sua sabedoria.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 7</div>
+          <p class="lyric">Álá wò rín kan<br>E áwo firin mi<br>Ópelé ké dé<br>Ópelé ké dé Bàbá<br>Ki ba oníbará kó ìyìn jé ní a<br>Èkó ké dé o<br>Álá te lè o<br>Àwa Bàbá<br>Ki ile wá o<br>Òrisà ile rè wá</p>
+          <p class="trad">Curvamo-nos no Alá que é único; Durante o culto, caminhamos embaixo dele; Mensageiro de Ifá, cantamos em sua homenagem; Mensageiro de Ifá, cantamos em sua homenagem, Pai; Somos seus clientes. O saudamos pela ajuda que nos dá; cantamos para que nos cubra com sua sabedoria; Curvamo-nos embaixo do Alá para recebermos suas bênçãos; Nosso Pai; O cumprimentamos para que venha à nossa casa; Orixá, venha à nossa casa.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 8</div>
+          <p class="lyric">Àwa Bàbá lè bò ayè<br>Aso funfun àwa bí<br>Àlá funfun dé Òrìsànlà<br>Ála ye Ájàlá o<br>Àlá funfun dé Òrìsànlà<br>Ebo Bàbá ebo unjé wá<br>Òrìsànlá bori o<br>Ebo<br>Bàbá bori o<br>Ebo Òòsáálá bori o</p>
+          <p class="trad">Nosso Pai do céu, cubra-nos com seu poder; Nascemos cobertos de branco; O alá branco de Oxalá nos encobre; O Alá de Oxalá nos dá a vida; O alá branco de Oxalá nos encobre; Venha comer Pai; Oxalá no bori; canjica de Oxalá; O Pai no bori; Oxalá no bori.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 9</div>
+          <p class="lyric">Ebo Bàbá ebo<br>Unjé wá<br>E iráwó<br>Ki Bàbá o ògá<br>E iráwó<br>Ki Bàbá o ògá<br>E te dun se ba dé siré<br>Kó rò lè, Kó rò lè<br>Bàbá Ifá Kó rò lè, Kó rò lè<br>Bàbá Ifá sehin bá dé siré</p>
+          <p class="trad">Canjica do Pai; venha comer; Ele é uma estrela; Saudamos o Pai Supremo; Ele é uma estrela; Saudamos o Pai Supremo; Nos curvamos ao criador que nos protege nesta festa aos Orixás; Nos abençoe com sua paz, nos abençoe com sua paz; Pai Ifá, nos abençoe com sua paz, nos abençoe com sua paz; Pai Ifá que sempre nos protege nas festas que fazemos em homenagem aos Orixás.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 10</div>
+          <p class="lyric">Kó rò lè, Kó rò lè<br>Bàbá Ifá Kó rò lè, Kó rò lè<br>Òrisá Bàbá<br>Òrisá beni o<br>Orisá Bàbá olu a mi<br>Òrisá beni o<br>Òrisá Bàbá Ajagunan Ori o<br>O ni rò dí dé<br>E lè jùbeelo<br>Bàbá e lè jùbeelo</p>
+          <p class="trad">Nos abençoe com sua paz, nos abençoe com sua paz; Pai Ifá, nos abençoe com sua paz, nos abençoe com sua Paz; Orixá Pai; Orixá, nos favoreça; Orixá nosso Pai e Senhor; Orixá, nos favoreça; Ele no ori; Ele vem e nos traz a paz que nos envolve; Seu poder está acima de tudo; O poder do Pai está acima de tudo.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 11</div>
+          <p class="lyric">E e bo ri o<br>E mò yìn ba<br>E mò Yìn Ijesá<br>E ro mi Bàbá kojáde<br>Òfurufúru rè mi rìn ila Bàbá<br>Bàbá ké rìn elemi<br>Ilé Ifá e mojú wá Bàbá<br>Àwa bó Yìn e mojúbà o<br>Olu a mi<br>Elemaxó elemi bó</p>
+          <p class="trad">Ele no bori; Louvamos sua sabedoria e sua ajuda; Louvamos sua sabedoria e tocamos ijexá para vós; Pai que está no céu, traga-nos a sua paz; Caminhamos sob o firmamento que é a casa do Pai; Pai, cantamos para saúda-lo. Vosso poder nos desperta a vida; Pai de Sabedoria, venha à nossa casa; Nós o adoramos e o glorificamos. Mojubá!; Meu Senhor!; Elemaxó ilumine a nossa vida.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 12</div>
+          <p class="lyric">Elemaxó àwa ògá<br>E lè Bàbá béérè<br>E ma wá<br>Òfurufurú, Òfurufurú, Òfurufurú<br>Bàbá o dé<br>Olorum olówó e ké<br>Ala-morerè, Ala-morerè o fe ki kún<br>Ala-morerè, Ala-morerè e kú abò<br>Bàbá ba di ile a tútú<br>A tútú atori àkó lè gangan yanran<br>Bùnlaye ri kó</p>
+          <p class="trad">Elemaxó é o chefe, venha até nós; Pai, o saudamos e pedimos que nos abençoe; ele sempre nos atende; o firmamento, o firmamento, o firmamento; Pai, nos proteja; cantamos para Olorum Olówó; Ala-morerè ama os mortais e é bem-vindo; Pai, retorne com alegria à nossa casa para nos ajudar, em silêncio, usando seu atori com muita bondade e justiça; permita que possamos aprender com sua presença.</p>
+        </div>
+
+        <div class="cantiga">
+          <div class="cantiga-tag">Trecho 13</div>
+          <p class="lyric">Olorum olówó e ké<br>Oun siré ìgbín èkó roró<br>Bàbá a fé aba akin ebo wá o<br>Yágò mò dé n’gè ore<br>Yágò mò</p>
+          <p class="trad">Cantamos para Olorum Olówó; Em sua festa tocamos o ìgbín em respeito à sua sabedoria e austeridade; Pai que amamos! És idoso e valente! Venha ao nosso culto!; Nos dê licença para elogiar a sua generosidade em nos dar sabedoria; Por favor, ensine-nos.</p>
+        </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-practice" data-vid="Un2Nu4GRRAk" data-name="Oxalá / Oxaguiã">
+              <span class="btn-ic">&#9654;</span> Praticar (cantar junto)
+            </button>
+            <a class="btn btn-ghost" href="https://youtu.be/Un2Nu4GRRAk?si=H6weKGgZuRO1m9T4" target="_blank" rel="noopener">
+              Abrir no YouTube
+            </a>
+            <a class="btn btn-ghost" href="http://ileaseegbeomorisaogum.blogspot.com/2012/11/cantigas-de-xire-de-oxala.html" target="_blank" rel="noopener">
+              Ver fonte da letra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <h2 class="quick-title">Lista rápida de áudios</h2>
+  <p class="quick-sub">Se algum botão acima não abrir corretamente, use este atalho direto.</p>
+  <div class="quick-grid">
+    <button type="button" class="quick-btn" style="--accent:#c0392b" data-vid="jAiVVy5IVnQ" data-name="Exu"><span class="quick-num">01</span><span class="quick-name">Exu</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#5b6b73" data-vid="lpIW8bxp52Q" data-name="Ogum"><span class="quick-num">02</span><span class="quick-name">Ogum</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#2f6b3a" data-vid="jF0AMzsJJhw" data-name="Oxóssi"><span class="quick-num">03</span><span class="quick-name">Oxóssi</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#4a7c3f" data-vid="MuRjEAFetNE" data-name="Ossaim"><span class="quick-num">04</span><span class="quick-name">Ossaim</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#3a3630" data-vid="OmjQ3pQubBI" data-name="Omolu / Obaluaiê"><span class="quick-num">05</span><span class="quick-name">Omolu / Obaluaiê</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#7a8f3a" data-vid="kDXrK0uv4rk" data-name="Oxumarê"><span class="quick-num">06</span><span class="quick-name">Oxumarê</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#5c4a7a" data-vid="drQ_jzGm3c8" data-name="Nanã"><span class="quick-num">07</span><span class="quick-name">Nanã</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#a6231e" data-vid="qeB4xQsQddQ" data-name="Xangô"><span class="quick-num">08</span><span class="quick-name">Xangô</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#8a3a24" data-vid="aP5xDY1vsdk" data-name="Oyá / Iansã"><span class="quick-num">09</span><span class="quick-name">Oyá / Iansã</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#b5546b" data-vid="NMIu8Tip2q8" data-name="Obá"><span class="quick-num">10</span><span class="quick-name">Obá</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#c98a3a" data-vid="y2aR8SJJ2GY" data-name="Ewá"><span class="quick-num">11</span><span class="quick-name">Ewá</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#c9a227" data-vid="Mleg8rrC6d4" data-name="Oxum"><span class="quick-num">12</span><span class="quick-name">Oxum</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#c9a227" data-vid="GdP4-a6wOI0" data-name="Logun Edé"><span class="quick-num">13</span><span class="quick-name">Logun Edé</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#1f5c8a" data-vid="fblQv6RzkzI" data-name="Yemanjá"><span class="quick-num">14</span><span class="quick-name">Yemanjá</span><span class="quick-ic">&#9654;</span></button>
+<button type="button" class="quick-btn" style="--accent:#d9d2c0" data-vid="Un2Nu4GRRAk" data-name="Oxalá / Oxaguiã"><span class="quick-num">15</span><span class="quick-name">Oxalá / Oxaguiã</span><span class="quick-ic">&#9654;</span></button>
+  </div>
+
+  <footer>
+    <strong>Ilê Asé Karè Oju Igbi</strong> — Cantigas do Xirê<br>
+    Material de apoio interno para estudo.
+    <span class="credit">ileasekareojuigbi.vercel.app</span>
+  </footer>
+</main>
+
+<div class="mini-player" id="miniPlayer" hidden>
+  <div class="mini-player-inner">
+    <div class="mini-embed"><div id="ytHost"></div></div>
+    <div class="mini-info">
+      <div class="mini-eyebrow">Praticando</div>
+      <div class="mini-name" id="miniName"></div>
+    </div>
+    <button type="button" class="mini-close" id="miniClose" aria-label="Fechar player">&times;</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.orixa-head').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var section = btn.closest('.orixa');
+      var isOpen = section.classList.contains('open');
+      document.querySelectorAll('.orixa.open').forEach(function (s) {
+        if (s !== section) {
+          s.classList.remove('open');
+          s.querySelector('.orixa-head').setAttribute('aria-expanded', 'false');
+        }
+      });
+      section.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
+  document.querySelectorAll('.chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var id = chip.getAttribute('data-target');
+      var target = document.getElementById(id);
+      if (target && !target.classList.contains('open')) {
+        document.querySelectorAll('.orixa.open').forEach(function (s) {
+          s.classList.remove('open');
+          s.querySelector('.orixa-head').setAttribute('aria-expanded', 'false');
+        });
+        target.classList.add('open');
+        target.querySelector('.orixa-head').setAttribute('aria-expanded', 'true');
+      }
+      document.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+    });
+  });
+
+  var first = document.querySelector('.orixa');
+  if (first) {
+    first.classList.add('open');
+    first.querySelector('.orixa-head').setAttribute('aria-expanded', 'true');
+  }
+
+  // ---- Practice mini-player ----
+  var miniPlayer = document.getElementById('miniPlayer');
+  var miniName = document.getElementById('miniName');
+  var activeBtn = null;
+
+  function setActive(btn) {
+    if (activeBtn) {
+      activeBtn.classList.remove('is-active');
+      activeBtn.innerHTML = '<span class="btn-ic">&#9654;</span> Praticar (cantar junto)';
+    }
+    activeBtn = btn;
+    if (btn && btn.classList.contains('btn-practice')) {
+      btn.classList.add('is-active');
+      btn.innerHTML = '<span class="btn-ic">&#9632;</span> Tocando — praticar';
+    }
+  }
+
+  // Player YouTube via API oficial (postMessage), necessário pro autoplay
+  // funcionar dentro do toque do usuário no Safari iOS.
+  var ytPlayer = null;
+  var ytReady = false;
+  var pendingVid = null;
+
+  var ytApiTag = document.createElement('script');
+  ytApiTag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(ytApiTag);
+
+  window.onYouTubeIframeAPIReady = function () {
+    ytPlayer = new YT.Player('ytHost', {
+      playerVars: { playsinline: 1, rel: 0 },
+      events: {
+        onReady: function () {
+          ytReady = true;
+          if (pendingVid) {
+            ytPlayer.loadVideoById(pendingVid);
+            ytPlayer.playVideo();
+            pendingVid = null;
+          }
+        }
+      }
+    });
+  };
+
+  function openMiniPlayer(vid, name, btn) {
+    miniName.textContent = name;
+    miniPlayer.hidden = false;
+    document.body.classList.add('has-player');
+    setActive(btn);
+    if (ytReady && ytPlayer && ytPlayer.loadVideoById) {
+      ytPlayer.loadVideoById(vid);
+      ytPlayer.playVideo();
+    } else {
+      pendingVid = vid;
+    }
+  }
+
+  function closeMiniPlayer() {
+    if (ytReady && ytPlayer && ytPlayer.stopVideo) {
+      ytPlayer.stopVideo();
+    }
+    pendingVid = null;
+    miniPlayer.hidden = true;
+    document.body.classList.remove('has-player');
+    setActive(null);
+  }
+
+  document.querySelectorAll('.btn-practice').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.classList.contains('is-active')) {
+        closeMiniPlayer();
+        return;
+      }
+      openMiniPlayer(btn.getAttribute('data-vid'), btn.getAttribute('data-name'), btn);
+    });
+  });
+
+  document.querySelectorAll('.quick-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      openMiniPlayer(btn.getAttribute('data-vid'), btn.getAttribute('data-name'), null);
+    });
+  });
+
+  document.getElementById('miniClose').addEventListener('click', closeMiniPlayer);
+</script>
+</body>
+</html>
