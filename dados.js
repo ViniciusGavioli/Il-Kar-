@@ -1869,7 +1869,8 @@ window.CANTIGAS = [
               "Ele atirou ninguém viu",
               "Só caboclo é quem sabe aonde a flecha caiu"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1695
           },
           {
             "rotulo": "Ponto 16 · Sultão das matas — Ele é o rei, ele é o tata",
@@ -1894,7 +1895,8 @@ window.CANTIGAS = [
               "Ele é o rei",
               "Ele é o tata 2x"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1751
           },
           {
             "rotulo": "Ponto 17 · Tava longe dessa aldeia",
@@ -1903,7 +1905,8 @@ window.CANTIGAS = [
               "Tava longe tava longe tava longe dessa aldeia 2x",
               "Tava longe tava longe tava longe dessa aldeia 2x"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1808
           },
           {
             "rotulo": "Ponto 18 · Nunca vi na minha aldeia — Tanaraê",
@@ -1917,7 +1920,8 @@ window.CANTIGAS = [
               "Ê tanarae tanarae tanarae minha aldeia",
               "Ê tanarae tanarae tanarae minha aldeia"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1841
           },
           {
             "rotulo": "Ponto 19 · Caboclo tá no mato — Maiá dendê",
@@ -1933,7 +1937,8 @@ window.CANTIGAS = [
               "ê maia dendê ê dendê caboclo maia",
               "ê maia dendê ê dendê caboclo maia"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1990
           },
           {
             "rotulo": "Ponto 20 · Ô Sultão, aonde é que você mora",
@@ -1977,7 +1982,8 @@ window.CANTIGAS = [
               "Ô Sultão",
               "Nas ondas do mar sagrada"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 2038
           },
           {
             "rotulo": "Ponto 21 · Sultão das matas é o rei do rei",
@@ -1998,7 +2004,8 @@ window.CANTIGAS = [
               "Que de um lado sacode as penas",
               "E do outro sobe a ouro"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 2104
           },
           {
             "rotulo": "Ponto 22 · Sultão das matas subindo a montanha",
@@ -2018,7 +2025,8 @@ window.CANTIGAS = [
               "Indorere que mata medonha",
               "Indorere que mata medonha"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1610
           }
         ]
       }
