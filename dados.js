@@ -1548,7 +1548,7 @@ window.CANTIGAS = [
               "Tava lhe chamando lhe chamando eeuaa 4x"
             ],
             "traducao": "",
-            "inicio": 792
+            "inicio": 192
           },
           {
             "rotulo": "Ponto 4 · Ira ra mi na kue — Pisa na trilha",
