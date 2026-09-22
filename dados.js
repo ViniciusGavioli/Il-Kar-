@@ -40,14 +40,14 @@
 window.CANTIGAS = [
   {
     "id": "caboclo",
-    "rotulo": "Caboclo & Boiadeiro",
-    "titulo": "Cantigas<br>de Caboclo",
-    "subtitulo": "Pontos cantados de caboclo e boiadeiro, com letra e áudio de referência.",
+    "rotulo": "Caboclo Boiadeiro",
+    "titulo": "Cantigas de<br>Caboclo Boiadeiro",
+    "subtitulo": "Pontos cantados de caboclo boiadeiro, com letra e áudio de referência.",
     "nota": "A referência principal é sempre a forma cantada na casa. A gravação é um vídeo só: o botão com o horário ao lado do ponto pula direto para o momento dele. Os pontos ainda <strong>sem horário</strong> aparecem sem botão, e ganham o seu assim que o tempo for conferido na gravação.",
     "entidades": [
       {
         "id": "caboclo",
-        "nome": "Caboclo e Boiadeiro",
+        "nome": "Caboclo Boiadeiro",
         "subtitulo": "GIRA DE CABOCLO",
         "cor": "#4E9E5F",
         "video": "Tb22AQiI5cc",

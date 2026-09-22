@@ -1,7 +1,7 @@
 # Cantigas — Ilê Asé Karè Oju Igbi
 
 Material de apoio interno: letras e áudios de referência dos pontos cantados de
-caboclo e boiadeiro.
+caboclo boiadeiro.
 
 No ar em **ileasekareojuigbi.vercel.app**
 
@@ -34,7 +34,7 @@ não funciona: o navegador bloqueia o carregamento do `dados.js` em `file://`.)
 
 Tudo acontece no `dados.js`. A estrutura tem três níveis:
 
-**linha** (Caboclo & Boiadeiro) → **entidade** (a gira) → **cantiga** (cada ponto).
+**linha** (Caboclo Boiadeiro) → **entidade** (a gira) → **cantiga** (cada ponto).
 
 A estrutura aguenta mais de uma linha e mais de uma entidade — o seletor do topo e a
 barra de navegação aparecem sozinhos quando houver mais de uma.
@@ -45,8 +45,8 @@ da lista, então inserir no meio não obriga a renumerar nada:
 
 ```js
 {
-  "id": "boiadeiro-sete-flechas",
-  "nome": "Boiadeiro Sete Flechas",
+  "id": "caboclo-sete-flechas",
+  "nome": "Caboclo Boiadeiro Sete Flechas",
   "subtitulo": "LINHA DE BOIADEIRO",
   "cor": "#8a5a2b",
   "video": "abc123XYZ",
@@ -70,7 +70,7 @@ da lista, então inserir no meio não obriga a renumerar nada:
 Alguns cuidados que evitam dor de cabeça:
 
 - **`id`** precisa ser curto, minúsculo, sem acento e sem espaço. Ele vira link direto:
-  `…vercel.app/#boiadeiro-sete-flechas`. Não repita um `id` já usado.
+  `…vercel.app/#caboclo-sete-flechas`. Não repita um `id` já usado.
 - **`letra`** é uma **lista de versos** — um verso por item, sem `<br>`. A quebra de
   linha é feita sozinha.
 - **`video`** é só o identificador do YouTube, não a URL inteira. Em
