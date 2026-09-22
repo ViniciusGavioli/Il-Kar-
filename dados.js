@@ -1849,7 +1849,7 @@ window.CANTIGAS = [
               "Ê lá na Hungria na Hungriaaa"
             ],
             "traducao": "",
-            "inicio": 1560
+            "inicio": 1590
           },
           {
             "rotulo": "Ponto 15 · Ele atirou",
