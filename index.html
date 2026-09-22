@@ -489,6 +489,19 @@ main { max-width: 660px; margin: 0 auto; padding: var(--e5) var(--e4) 0; }
   box-shadow: none;
 }
 /* botão de horário: pertence à cor do orixá */
+/* quantas vezes o ponto inteiro é cantado */
+.marca-repete {
+  flex: 0 0 auto;
+  padding: 4px 9px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--borda);
+  background: var(--superficie-2);
+  color: var(--texto-fraco);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .02em;
+}
 .btn-trecho {
   flex: 0 0 auto;
   display: inline-flex;
@@ -815,6 +828,12 @@ footer .credit { display: block; margin-top: var(--e2); font-size: var(--t-xs); 
 
     var topo = el('div', 'cantiga-topo');
     topo.appendChild(el('div', 'cantiga-tag', c.rotulo || ''));
+
+    if (c.repete) {
+      var rep = el('span', 'marca-repete', c.repete + '×');
+      rep.title = 'O ponto inteiro se canta ' + c.repete + ' vezes';
+      topo.appendChild(rep);
+    }
 
     // Um vídeo só para a entidade inteira: cada cantiga ganha um botão que
     // pula direto para o seu momento dentro dele.

@@ -57,7 +57,8 @@ da lista, então inserir no meio não obriga a renumerar nada:
         "segundo verso",
         "terceiro verso"
       ],
-      "traducao": "Sentido do ponto, em português corrido."
+      "traducao": "Sentido do ponto, em português corrido.",
+      "repete": 3
     }
   ]
 }
@@ -74,6 +75,9 @@ Alguns cuidados que evitam dor de cabeça:
 - **`cor`** é a única cor que você informa. A página deriva sozinha a cor do número
   e a versão clareada usada nos rótulos, sempre com contraste suficiente sobre o
   fundo escuro — então não existe combinação que "some" na tela.
+- **`repete`** é opcional: quantas vezes o ponto **inteiro** é cantado. Aparece como
+  um selo (`3×`) ao lado do nome. Não confundir com o `- 2x` escrito dentro de um
+  verso, que é repetição só daquele verso e fica no texto mesmo.
 - **`inicio`** é opcional: o segundo em que aquele trecho começa dentro do vídeo da
   entidade. Com ele aparece um botão com o horário, que toca a gravação já a partir
   dali. `1:14` vira `74` (minutos × 60 + segundos). Sem ele, nenhum botão aparece —

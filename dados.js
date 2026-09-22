@@ -2024,6 +2024,476 @@ window.CANTIGAS = [
             ],
             "traducao": "",
             "inicio": 1610
+          },
+          {
+            "rotulo": "Ponto 23 · Minha mãe eu quero água",
+            "letra": [
+              "Minha mãe eu quero água, da fonte do Angolá - 2x",
+              "Onde os pombos vão beber e os caboclo vão rezar",
+              "",
+              "Maia dendê, dendê caboclo maiá - 10x"
+            ],
+            "traducao": "",
+            "repete": 3,
+            "inicio": 2700
+          },
+          {
+            "rotulo": "Ponto 24 · Ê Ê Ê na mata, lá da Jurema",
+            "letra": [
+              "Ê Ê Ê na mata, lá da Jurema - 2x",
+              "É uma lei severa, é uma lei sem pena - 2x"
+            ],
+            "traducao": "",
+            "repete": 9
+          },
+          {
+            "rotulo": "Ponto 25 · Andando na mata encontrei duas índias",
+            "letra": [
+              "Andando na mata encontrei duas índias - 2x",
+              "Uma era Jussara, outra era Jupira - 3x"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 26 · Ê Cabocla morena",
+            "letra": [
+              "Ê Cabocla morena, ê um dê um dá",
+              "Cabocla morena filha de gangazuamba"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 27 · Ê o sol, oh lua",
+            "letra": [
+              "Ê o sol, oh lua - 2x",
+              "Clareia o mundo, para nós passar, esquenta a aldeia",
+              "Pra ele chegar"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 28 · No alto daquela palmeira",
+            "letra": [
+              "No alto daquela palmeira aonde arara foi morar",
+              "Atira meu pai, atira, não deixa arara voar - 2x"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 29 · Ê oh caçador da mata real",
+            "letra": [
+              "Ê oh caçador da mata real, se não matou o meu pavão",
+              "Faz favor de não matar"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 30 · Eu atirei no passarão",
+            "letra": [
+              "Eu atirei no passarão, não foi para matar - 2x",
+              "Minha mão escorregou, matou, matou - 2x"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 31 · Atirei no passarão e não matei",
+            "letra": [
+              "Atirei no passarão, atirei no passarão",
+              "Atirei no passarão e não matei,",
+              "se o passarão voltar eu matarei"
+            ],
+            "traducao": "",
+            "repete": 5
+          },
+          {
+            "rotulo": "Ponto 32 · Oh da terra onde eu nasci",
+            "letra": [
+              "Oh da terra onde eu nasci - 2x",
+              "Tem sapucaia, tem Jurema, tem pau-brasil",
+              "Oh que maravilha, criação da natureza",
+              "E os caboclos lindos do meu Brasil"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 33 · Lá na Jurema, a cobra pia",
+            "letra": [
+              "Oh lá, lá na Jurema, a cobra pia, caboclo quer passar",
+              "A cobra pia, caboclo quer passar,",
+              "com seu arco e sua flecha e sua cobra coral"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 34 · Quando eu saí da minha aldeia",
+            "letra": [
+              "Eu andei, quando eu saí da minha aldeia - 2x",
+              "Na mão direita trago a Juriti",
+              "No meio do caminho pra se dividir",
+              "Na mão esquerda trago sementinhas,",
+              "é muito tempo que eu cheguei aqui"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 35 · Por cima do Wandê",
+            "letra": [
+              "Por cima do Wandê, por baixo do Wandá - 2x",
+              "Saia do caminho, caboclo quer passar",
+              "Ê Ê Ê, Ê Ê A",
+              "Abra a porta minha gente, caboclo quer passar"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 36 · Fui fazer uma caçada no morro da Juriti",
+            "letra": [
+              "Fui fazer uma caçada no morro da Juriti - 2x",
+              "Animal me atacou, minha sina eu fiz cumprir",
+              "Animal me atacou, minha adaga me valeu",
+              "Rei do céu tem piedade, era ele ou era eu - 2x"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 37 · Quando ele vem na sua aldeia, Bom Jesus",
+            "letra": [
+              "Quando ele vem na sua aldeia, Bom Jesus",
+              "Ele é o vento, Bom Jesus de Maria"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 38 · Ê bandeira branca",
+            "letra": [
+              "Ê bandeira branca trago no pau forte",
+              "Ê trago no peito uma estrela brilhante",
+              "Ê Deus o salve, casa santa!",
+              "Com sua lança de guerreiro"
+            ],
+            "traducao": "",
+            "repete": 6
+          },
+          {
+            "rotulo": "Ponto 39 · Caminho que eu passei",
+            "letra": [
+              "Caminho que eu passei, você não passará",
+              "Caminho que eu andei, você não andará",
+              "Na mata tem uma onça, caboclo mora lá - 2x"
+            ],
+            "traducao": "",
+            "repete": 5
+          },
+          {
+            "rotulo": "Ponto 40 · Caboclo é esse da faixa vermelha",
+            "letra": [
+              "Caboclo é esse da faixa vermelha",
+              "É caboclo que vem abalar aldeia"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 41 · Ele veste pena, ele come cru",
+            "letra": [
+              "Ele veste pena, ele come cru",
+              "Ele é sultão das matas, irmão de Ekum"
+            ],
+            "traducao": "",
+            "repete": 5
+          },
+          {
+            "rotulo": "Ponto 42 · Sua cama de ortiga",
+            "letra": [
+              "Sua cama de ortiga, travesseiro cansanção",
+              "Ele é caboclo, não nega sua nação"
+            ],
+            "traducao": "",
+            "repete": 5
+          },
+          {
+            "rotulo": "Ponto 43 · Eno, Eno, Eno ê",
+            "letra": [
+              "Eno, Eno, Eno ê",
+              "Ero, ero, ero ê",
+              "Quem compra fiado paga",
+              "Pro dono não vir cobrar"
+            ],
+            "traducao": "",
+            "repete": 5
+          },
+          {
+            "rotulo": "Ponto 44 · Ê brasileiro, brasileiro",
+            "letra": [
+              "Ê brasileiro, brasileiro - 2x",
+              "Brasileiro imperador, eu nasci foi no Brasil",
+              "Brasileiro, sim senhor"
+            ],
+            "traducao": "",
+            "repete": 5
+          },
+          {
+            "rotulo": "Ponto 45 · Ê minha mãe é brasileira",
+            "letra": [
+              "Ê minha mãe é brasileira - 2x",
+              "Meu pai imperador",
+              "O que é que eu sou? - 2x",
+              "Brasileiro, imperador"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 46 · Salve a bandeira brasileira",
+            "letra": [
+              "Ê Ê Ê, salve a bandeira brasileira - 2x",
+              "São quatro cores pra dividir",
+              "Oh verde, amarelo, azul e branco",
+              "Ê são as cores do meu Brasil"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 47 · Verde é esperança",
+            "letra": [
+              "Verde é esperança",
+              "Oh amarelo é o desespero",
+              "O azul traz a liberdade",
+              "Pelos caboclos brasileiros"
+            ],
+            "traducao": "",
+            "repete": 2
+          },
+          {
+            "rotulo": "Ponto 48 · Ê Ê caminhei até chegar",
+            "letra": [
+              "Ê Ê caminhei até chegar",
+              "Por uma tribo meio que desconhecida",
+              "Eu avistei o chefe daquela tribo",
+              "Aquele índio senhor foi meu guia",
+              "Eu perguntei praquele caboclo",
+              "Que respondeu no pé de uma Jurema",
+              "E me falou das lendas da Jurema",
+              "No gingado de Tupinambá"
+            ],
+            "traducao": "",
+            "repete": 13
+          },
+          {
+            "rotulo": "Ponto 49 · Ê de marrumba chetruê",
+            "letra": [
+              "Ê de marrumba chetruê",
+              "Ê de marrumba chetruá"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 50 · Bate congo lá na aldeia",
+            "letra": [
+              "Ê Ê bate congo lá na aldeia, ê ê ê",
+              "Bate congo na aldeia, marrumba chetruá"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 51 · Oh lá vem o congo",
+            "letra": [
+              "Oh lá vem o congo, oh lá vem o índio",
+              "Lá vem o congo, lá vem o índio"
+            ],
+            "traducao": "",
+            "repete": 8
+          },
+          {
+            "rotulo": "Ponto 52 · Índio guerreiro, vamos guerrear",
+            "letra": [
+              "Índio guerreiro, vamos guerrear - 2x",
+              "Eu ia, eu caá - 2x"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 53 · Oh índio companheiro",
+            "letra": [
+              "Oh índio companheiro, índio",
+              "Oh índio, vamos guerrear",
+              "Oh índio, chama caboclo",
+              "Para brincar nesse cazuá"
+            ],
+            "traducao": "",
+            "repete": 6
+          }
+        ]
+      },
+      {
+        "id": "boiadeiro",
+        "nome": "Boiadeiro",
+        "subtitulo": "LINHA DE BOIADEIRO",
+        "cor": "#C08A4A",
+        "video": "Tb22AQiI5cc",
+        "youtube": "https://youtu.be/Tb22AQiI5cc",
+        "fonte": "",
+        "cantigas": [
+          {
+            "rotulo": "Ponto 1 · Ê bom vaqueiro",
+            "letra": [
+              "Ê bom vaqueiro, bom vaqueiro",
+              "Dê-me licença de eu passar",
+              "Com meus filhos [palavra pouco legível]",
+              "Para caça me guiar",
+              "",
+              "Bom vaqueiro, quem vem lá",
+              "Quem sou eu, quem vem lá",
+              "Eu vou levar da cancela, quem vem lá",
+              "O boiadeiro sou eu, quem vem lá - 2x"
+            ],
+            "traducao": "",
+            "repete": 2
+          },
+          {
+            "rotulo": "Ponto 2 · Vaquejada boa é lá em Belém",
+            "letra": [
+              "Vaquejada boa é lá em Belém - 2x",
+              "Ê Ê A, quem vem lá - 2x",
+              "Ê boiadeiro é divisa (?)"
+            ],
+            "traducao": "",
+            "repete": 6
+          },
+          {
+            "rotulo": "Ponto 3 · Nos campos de Jerusalém",
+            "letra": [
+              "Nos campos de Jerusalém - 2x",
+              "Meu gado esparramado",
+              "Ê Ê chamei, Ê Ê chamei - 2x",
+              "Seu boiadeiro pra apanhar meu gado"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 4 · De tropeiro",
+            "letra": [
+              "De tropeiro ê ê, de tropeiro aê - 4x",
+              "Aiaiaia, de tropeiro ê - 2x",
+              "Aiaiaia, de tropeiro a"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 5 · Seu boiadeiro por aqui choveu",
+            "letra": [
+              "Seu boiadeiro por aqui choveu - 2x",
+              "Choveu que água rolou",
+              "Foi tanta água que caiu na aldeia",
+              "Foi tanta água que meu boi nadou"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 6 · Na levada povo, vamos a Belém",
+            "letra": [
+              "Na levada povo, vamos a Belém",
+              "Vamos ver seu boiadeiro que nasceu pro nosso bem"
+            ],
+            "traducao": "",
+            "repete": 7
+          },
+          {
+            "rotulo": "Ponto 7 · Oh lá em Roma, tem uma igreja",
+            "letra": [
+              "Oh lá em Roma, tem uma igreja - 2x",
+              "Dentro dela tem morador - 2x"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 8 · Cadê a corda de laçar meu boi",
+            "letra": [
+              "Ê cadê a corda de laçar meu boi",
+              "Meu boi fugiu, não sei pra onde foi"
+            ],
+            "traducao": "",
+            "repete": 6
+          },
+          {
+            "rotulo": "Ponto 9 · Bota no laço, vaqueiro",
+            "letra": [
+              "Ê Ê bota no laço, vaqueiro",
+              "Oh vem topar, oh vem topar",
+              "Na porteira do curral"
+            ],
+            "traducao": "",
+            "repete": 3
+          },
+          {
+            "rotulo": "Ponto 10 · Á ê ê, chapéu grande",
+            "letra": [
+              "Á ê ê, chapéu grande",
+              "Beirada de ventania - 3x"
+            ],
+            "traducao": "",
+            "repete": 6
+          },
+          {
+            "rotulo": "Ponto 11 · Ê laje grande",
+            "letra": [
+              "Ê laje grande, a pedra do morro desce",
+              "Quem tem é porque Deus dá",
+              "Deus dá a quem merece"
+            ],
+            "traducao": "",
+            "repete": 6
+          },
+          {
+            "rotulo": "Ponto 12 · Meu lajedo é muito grande",
+            "letra": [
+              "Ê Ê meu lajedo é muito grande,",
+              "de pedrinha miúda",
+              "De pedrinha miudinha,",
+              "de pedrinha graúda"
+            ],
+            "traducao": "",
+            "repete": 5
+          },
+          {
+            "rotulo": "Ponto 13 · Cascata dos seus cabelos",
+            "letra": [
+              "Cascata dos seus cabelos",
+              "Eu bebi água de gravatá",
+              "Eu bebi água no gravatá, seu boiadeiro",
+              "Eu bebi no gravatá"
+            ],
+            "traducao": "",
+            "repete": 4
+          },
+          {
+            "rotulo": "Ponto 14 · Ê de Taquari",
+            "letra": [
+              "Ê de Taquari, cadê o seu laço e seu jibão",
+              "Boiadeiro, cadê o seu laço e seu jibão"
+            ],
+            "traducao": "",
+            "repete": 6
           }
         ]
       }
