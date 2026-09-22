@@ -273,15 +273,46 @@
     border-top: 1px dashed var(--line);
   }
   .cantiga:first-child { border-top: none; }
+  .cantiga-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
   .cantiga-tag {
-    display: inline-block;
+    flex: 1 1 auto;
+    min-width: 0;
     font-size: 10.5px;
     letter-spacing: .08em;
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 700;
-    margin-bottom: 5px;
   }
+  .btn-trecho {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    border: 1px solid var(--gold);
+    background: #FFFFFF;
+    color: var(--maroon);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn-trecho .btn-ic { font-size: 9px; color: var(--gold); }
+  .btn-trecho:active { transform: scale(.97); }
+  .btn-trecho.is-active {
+    background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+    border-color: var(--gold);
+    color: #FFFFFF;
+  }
+  .btn-trecho.is-active .btn-ic { color: #FFFFFF; }
   .lyric {
     font-family: 'Source Serif 4', Georgia, serif;
     font-weight: 600;
@@ -583,9 +614,36 @@
 
   // ---------- Construção de um bloco de entidade ----------
 
-  function montaCantiga(c) {
+  // 74 -> "1:14"
+  function relogio(seg) {
+    var m = Math.floor(seg / 60), s = Math.floor(seg % 60);
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function montaCantiga(c, ent) {
     var box = el('div', 'cantiga');
-    box.appendChild(el('div', 'cantiga-tag', c.rotulo || ''));
+
+    var topo = el('div', 'cantiga-topo');
+    topo.appendChild(el('div', 'cantiga-tag', c.rotulo || ''));
+
+    // Um vídeo só para a entidade inteira: cada cantiga ganha um botão que
+    // pula direto para o seu momento dentro dele.
+    var vid = c.video || ent.video;
+    if (vid && c.inicio != null) {
+      var bt = el('button', 'btn-trecho');
+      bt.type = 'button';
+      bt.setAttribute('data-vid', vid);
+      bt.setAttribute('data-inicio', String(c.inicio));
+      bt.setAttribute('data-name', (ent.nome || '') + ' — ' + (c.rotulo || ''));
+      bt.setAttribute('aria-label', 'Tocar a partir de ' + relogio(c.inicio));
+      rotuloTrecho(bt, relogio(c.inicio), false);
+      bt.addEventListener('click', function () {
+        if (bt.classList.contains('is-active')) { parar(); return; }
+        tocar(vid, bt.getAttribute('data-name'), bt, c.inicio);
+      });
+      topo.appendChild(bt);
+    }
+    box.appendChild(topo);
 
     var p = el('p', 'lyric');
     var versos = c.letra || [];
@@ -620,7 +678,7 @@
     var body  = el('div', 'orixa-body');
     var inner = el('div', 'orixa-body-inner');
 
-    (ent.cantigas || []).forEach(function (c) { inner.appendChild(montaCantiga(c)); });
+    (ent.cantigas || []).forEach(function (c) { inner.appendChild(montaCantiga(c, ent)); });
 
     var acoes = el('div', 'actions');
     if (ent.video) {
@@ -655,6 +713,23 @@
     btn.appendChild(el('span', 'btn-ic', tocando ? '■' : '▶'));
     btn.appendChild(document.createTextNode(
       tocando ? ' Tocando — praticar' : ' Praticar (cantar junto)'));
+  }
+
+  function rotuloTrecho(btn, tempo, tocando) {
+    btn.innerHTML = '';
+    btn.appendChild(el('span', 'btn-ic', tocando ? '■' : '▶'));
+    btn.appendChild(document.createTextNode(' ' + tempo));
+  }
+
+  // Devolve o rótulo de um botão ao estado parado, seja ele de trecho ou de entidade.
+  function destacar(btn, tocando) {
+    if (!btn) return;
+    btn.classList.toggle('is-active', !!tocando);
+    if (btn.classList.contains('btn-trecho')) {
+      rotuloTrecho(btn, relogio(Number(btn.getAttribute('data-inicio')) || 0), tocando);
+    } else {
+      rotuloPraticar(btn, tocando);
+    }
   }
 
   // ---------- Abrir / fechar ----------
@@ -770,10 +845,14 @@
       if (primeira) abrir(primeira);
     }
 
-    // Se algo já estava tocando e o botão existe nesta linha, remarca como ativo
+    // Se algo já estava tocando e o botão correspondente existe nesta linha,
+    // remarca como ativo. Com um vídeo só por entidade, o tempo de início é o
+    // que distingue um trecho do outro — casar só pelo id acenderia todos.
     if (vidAtual) {
-      var mesmo = elLista.querySelector('.btn-practice[data-vid="' + vidAtual + '"]');
-      marcarAtivo(mesmo || null);
+      var seletor = inicioAtual == null
+        ? '.btn-practice[data-vid="' + vidAtual + '"]'
+        : '.btn-trecho[data-vid="' + vidAtual + '"][data-inicio="' + inicioAtual + '"]';
+      marcarAtivo(elLista.querySelector(seletor) || null);
     }
   }
 
@@ -781,14 +860,14 @@
 
   var miniPlayer = document.getElementById('miniPlayer');
   var miniName   = document.getElementById('miniName');
-  var btnAtivo   = null;
-  var vidAtual   = null;
+  var btnAtivo    = null;
+  var vidAtual    = null;
+  var inicioAtual = null;
 
   function marcarAtivo(btn) {
-    if (btnAtivo && btnAtivo !== btn) rotuloPraticar(btnAtivo, false);
-    if (btnAtivo) btnAtivo.classList.remove('is-active');
+    if (btnAtivo && btnAtivo !== btn) destacar(btnAtivo, false);
     btnAtivo = btn;
-    if (btn) { btn.classList.add('is-active'); rotuloPraticar(btn, true); }
+    destacar(btn, true);
   }
 
   // Player do YouTube pela API oficial (postMessage): é o que faz o autoplay
@@ -813,22 +892,28 @@
             vidPendente = null;
           }
         }
+
       }
     });
   };
 
-  function tocar(vid, nome, btn) {
+  function tocar(vid, nome, btn, inicio) {
     if (!vid) return;
     vidAtual = vid;
+    inicioAtual = (inicio == null ? null : Number(inicio));
     miniName.textContent = nome;
     miniPlayer.hidden = false;
     document.body.classList.add('has-player');
     marcarAtivo(btn);
+
+    // A forma em objeto é a que aceita startSeconds; a API também aceita
+    // esse mesmo objeto quando o player ainda está carregando.
+    var pedido = { videoId: vid, startSeconds: inicioAtual || 0 };
     if (ytPronto && ytPlayer && ytPlayer.loadVideoById) {
-      ytPlayer.loadVideoById(vid);
+      ytPlayer.loadVideoById(pedido);
       ytPlayer.playVideo();
     } else {
-      vidPendente = vid;
+      vidPendente = pedido;
     }
   }
 
@@ -836,6 +921,7 @@
     if (ytPronto && ytPlayer && ytPlayer.stopVideo) ytPlayer.stopVideo();
     vidPendente = null;
     vidAtual = null;
+    inicioAtual = null;
     miniPlayer.hidden = true;
     document.body.classList.remove('has-player');
     marcarAtivo(null);

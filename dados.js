@@ -23,9 +23,15 @@
 //   cantigas   lista de trechos
 //
 // Um trecho tem:
-//   rotulo     "Trecho 1", "Cantiga 3", o que fizer sentido
-//   letra      lista de versos — CADA VERSO É UM ITEM da lista
-//   traducao   tradução em português corrido
+//   rotulo     "Trecho 1", "Ponto 3 · Nome do ponto", o que fizer sentido
+//   letra      lista de versos — CADA VERSO É UM ITEM da lista.
+//              Um item vazio ("") vira uma linha em branco entre estrofes.
+//   traducao   tradução ou comentário. Deixe "" quando não houver — nos pontos
+//              de caboclo, que já são em português, não há o que traduzir.
+//   inicio     OPCIONAL: segundo em que esse trecho começa dentro do vídeo da
+//              entidade. Tendo esse campo, aparece um botão com o horário ao
+//              lado do rótulo, que toca o vídeo já a partir dali.
+//              1:14 = 74. 2:30 = 150. (minutos x 60 + segundos)
 //
 // A numeração (01, 02, 03...) é automática, pela ordem da lista.
 // Para inserir uma entidade no meio, basta colocá-la na posição certa.
@@ -1500,7 +1506,539 @@ window.CANTIGAS = [
     "rotulo": "Caboclo & Boiadeiro",
     "titulo": "Cantigas<br>de Caboclo",
     "subtitulo": "Pontos cantados de caboclo e boiadeiro, com letra e áudio de referência.",
-    "nota": "Assim como no xirê, a referência principal é sempre a forma cantada na casa. Toque no nome para abrir os pontos; toque em <strong>Praticar</strong> para deixar o áudio tocando fixo embaixo da tela.",
-    "entidades": []
+    "nota": "Assim como no xirê, a referência principal é sempre a forma cantada na casa. A gravação é um vídeo só: o botão com o horário ao lado de cada ponto pula direto para o momento dele. <strong>Os horários ainda são provisórios</strong> e serão ajustados.",
+    "entidades": [
+      {
+        "id": "caboclo-sultao-das-matas",
+        "nome": "Caboclo",
+        "subtitulo": "GIRA DE CABOCLO",
+        "cor": "#2f6b3a",
+        "corTexto": "#ffffff",
+        "video": "Tb22AQiI5cc",
+        "youtube": "https://youtu.be/Tb22AQiI5cc",
+        "fonte": "",
+        "cantigas": [
+          {
+            "rotulo": "Ponto 1 · Saudação — Abre a sala do angolê",
+            "inicio": 74,
+            "letra": [
+              "Abre a sala do angole",
+              "E buki buke lele",
+              "Abre a sala do angole",
+              "E buki buke Lala",
+              "2x",
+              "",
+              "Eu aprendi campestre verde 2x",
+              "Cheio de tanta alegria 2x"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 2 · Abre esse campestre",
+            "inicio": 104,
+            "letra": [
+              "Abre esse campestre que eu quero passar 2x",
+              "Quero ver meu povo do lado de lá",
+              "",
+              "Abre esse campestre que eu quero passar 2x",
+              "Quero ver meu povo do lado de lá",
+              "",
+              "Tava lhe chamando lhe chamando eeee 2x",
+              "Tava lhe chamando lhe chamando eeuaa 2x",
+              "",
+              "Tava lhe chamando lhe chamando eeee 2x",
+              "Tava lhe chamando lhe chamando eeuaa 2x",
+              "",
+              "Maranhado em mata ardente, fui a procura de quem lhe chamou",
+              "",
+              "Ô boa noite meus senhores esses caboclo por aqui chegou",
+              "",
+              "Tava lhe chamando lhe chamando eee",
+              "Tava lhe chamando lhe chamando eeuaa 4x"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 3 · Ira ra mi na kue — Pisa na trilha",
+            "inicio": 134,
+            "letra": [
+              "Ira ra mi na kue",
+              "Ira ra mi na kue 2x.",
+              "",
+              "Piza na trilha, vem ver",
+              "Vem ver caboclo a sua aldeia 2x",
+              "",
+              "Ô piza na trilha camarada venha ver venha ver caboclo a sua aldeia",
+              "",
+              "Piza na trilha, vem ver",
+              "Vem ver caboclo a sua aldeia 2x"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 4 · Eu dei um tiro na sapucaia",
+            "inicio": 164,
+            "letra": [
+              "Eu dei um tiro na sapucaia não há caboclo que não ouça e que não saia 2x",
+              "",
+              "Eu dei um tiro na sapucaia não há caboclo que não ouça e que não saia 2x",
+              "",
+              "Eu dei um tiro ouvi gemido ainda tem caboclo escondido 2x",
+              "",
+              "Eu dei um tiro ouvi gemido ainda tem caboclo escondido 2x",
+              "",
+              "E ainda tem caboclo de baixo da samambaia 2x",
+              "",
+              "de baixo da samambaia",
+              "de baixo da samambaia",
+              "de baixo da samambaia",
+              "",
+              "E ainda tem caboclo de baixo da samambaia 2x",
+              "",
+              "de baixo da samambaia",
+              "de baixo da samambaia",
+              "de baixo da samambaia"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 5 · Eu chorei na boca da mata",
+            "inicio": 194,
+            "letra": [
+              "Eu chorei na boca da mata,",
+              "três caboclos me apareceu",
+              "Sultão das matas, seu Pena Branca,",
+              "Onça Jurema me socorreu,",
+              "pra sua aldeia eles me levaram,",
+              "me ensinaram a me defender",
+              "hoje sou filho de um caboclo",
+              "a ti serei fiel até morrer",
+              "",
+              "Nessa aldeia tem caboclo?",
+              "Tem sim senhor 2x",
+              "",
+              "Nessa aldeia tem caboclo?",
+              "Tem sim senhor 2x",
+              "",
+              "Nessa aldeia tem caboclo?",
+              "Tem sim senhor 2x",
+              "",
+              "Tem caboclo curandeiro, caboclo curandor",
+              "caboclo veste pena",
+              "caboclo é caçador",
+              "",
+              "Nessa mata tem caboclo?",
+              "Tem sim senhor 2x",
+              "",
+              "Nessa mata tem caboclo?",
+              "Tem sim senhor 2x",
+              "",
+              "Gostou de mim por que não vem me ver? 2x",
+              "",
+              "Gostou de mim por que não vem me ver 2x",
+              "",
+              "Se ele é caboclo tem que obedecer",
+              "Ele é caboclo diz que veste pena Venha ver",
+              "A força que a Jurema tem"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 6 · O meu pavão",
+            "inicio": 224,
+            "letra": [
+              "O meu pavão foi na beira do rio ia",
+              "E caboclo pegou",
+              "Pavão foi na beira do rio do na",
+              "E caboclo pegou",
+              "4x",
+              "",
+              "E pisa caboclo",
+              "Quero ver você pisar",
+              "2x",
+              "",
+              "E Samba de caboclo",
+              "faz aldeia chorar",
+              "2x",
+              "",
+              "Piza caboclo de um lado pro outro"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 7 · Ô mata medonha",
+            "inicio": 254,
+            "letra": [
+              "O mata mata",
+              "O mata medonha",
+              "O mata mata",
+              "O mata medonha",
+              "",
+              "O mata medonha meu Deus",
+              "Eu vou caçar nela",
+              "O mata medonha meu Deus",
+              "Eu vou caçar nela"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 8 · Mata virgem — Caboclo é a luz do mato",
+            "inicio": 284,
+            "letra": [
+              "mata virgem",
+              "mata ia",
+              "E e e mata ia",
+              "Mata virgem mata ia",
+              "Eeeee mata ia",
+              "2x",
+              "",
+              "Ele é da mata",
+              "Ele é da mata",
+              "Ele é da mata",
+              "e venha dizer",
+              "",
+              "Ele é da mata",
+              "Ele é da mata",
+              "Ele é da mata camarada",
+              "Ele é da mata e venha dizer",
+              "",
+              "O caboclo da mata virgem",
+              "Plantou ae nasceu flor",
+              "Caboclo da mata virgem",
+              "Plantou aí nasceu flor",
+              "",
+              "Eee caboclo é",
+              "Caboclo é",
+              "Caboclo é a luz do mato é",
+              "",
+              "Sultão das matas é a luz da mata é",
+              "Seu pena branca a luz do mato é",
+              "",
+              "Caboclo é",
+              "Caboclo é",
+              "Caboclo é",
+              "a luz do mato é 2x",
+              "",
+              "Ê cabocleiro é a luz do mato é",
+              "Irarai é a luz do mato é",
+              "",
+              "Caboclo é",
+              "a luz do mato é 2x"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 9 · Mi na ora — Quem manda é caboclo",
+            "inicio": 314,
+            "letra": [
+              "Mi na ora eeee",
+              "Mi na oraaaa",
+              "",
+              "Mi na ora eeee",
+              "Caboclo é hora é hora",
+              "",
+              "Mi na ora eeee",
+              "Mi na oraaaa",
+              "",
+              "Mi na ora eeee",
+              "Caboclo é hora é hora",
+              "",
+              "Lala o lala e",
+              "Quem manda é caboclo",
+              "",
+              "Lala o lala e quem manda é caboclo",
+              "",
+              "Lá la i la lá i lá"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 10 · Iraraê",
+            "inicio": 344,
+            "letra": [
+              "Ooooo iraraeee iraraee iraraee",
+              "Oooo ira ira ra i ra ra i ra"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 11 · Sindorerê — Cauiza é o rei",
+            "inicio": 374,
+            "letra": [
+              "Sindorere auê cauiza",
+              "Sindorere é o sangue real",
+              "Se ele é filho eu sou neto da Jurema",
+              "Sindorere auê cauiza",
+              "",
+              "Cauiza é o rei",
+              "É orixá",
+              "",
+              "Agora ????",
+              "É orixá",
+              "",
+              "Cauiza é o rei",
+              "É orixá",
+              "",
+              "Agora ????",
+              "É orixá",
+              "",
+              "Ê cauizou",
+              "Auê cauiza 2x",
+              "",
+              "Ê cauiza cauizou",
+              "Auê cauiza 2x",
+              "",
+              "Ê cauiza cauizou",
+              "Auê cauizou 2x"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 12 · Sai do mato",
+            "inicio": 404,
+            "letra": [
+              "Sai do mato e vem ….?",
+              "Sindorere bora caboclo",
+              "",
+              "Sai do mato e vem ….?",
+              "Sindorere bora caboclo",
+              "",
+              "Sai do mato e vem ….?",
+              "Sindorere bora caboclo",
+              "",
+              "Ê caboclo é",
+              "Caboclo é",
+              "Caboclo é a luz do mato é",
+              "",
+              "Caboclo é",
+              "Caboclo é",
+              "Caboclo é a luz do mato é"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 13 · Com Jesus de Maria — Lá na Hungria",
+            "inicio": 434,
+            "letra": [
+              "Ke ke ke ke keua ke ke ke com jesus de maria",
+              "",
+              "Com Jesus de maria  Eu tenho pai",
+              "Eu tenho mãe",
+              "Eu sou inocente minha morada é na Hungria",
+              "",
+              "Eu tenho pai",
+              "Eu tenho mãe",
+              "Sou um bom filho minha morada é na aldeia",
+              "",
+              "Eu tenho pai",
+              "Eu tenho mãe",
+              "Sou um bom filho minha morada é na aldeia",
+              "",
+              "Eu tenho pai",
+              "Eu tenho mãe",
+              "Sou um bom filho minha morada é na Hungria",
+              "",
+              "Ê Lá na Hungria",
+              "Lá na Hungria",
+              "Lá na Hungria",
+              "Ainda é um dia",
+              "",
+              "Lá na Hungria",
+              "Lá na Hungria",
+              "Lá na Hungria",
+              "Ê lá na Hungria na Hungriaaa",
+              "",
+              "Lá na Hungria",
+              "Lá na Hungria",
+              "Lá na Hungria",
+              "Ê lá na Hungria na Hungriaaa",
+              "",
+              "Lá na Hungria",
+              "Lá na Hungria",
+              "Lá na Hungria",
+              "Ê lá na Hungria na Hungriaaa"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 14 · Ele atirou",
+            "inicio": 464,
+            "letra": [
+              "Ele atirou, ele atirou ninguém viu",
+              "E caboclo é quem sabe aonde a flecha caiu",
+              "",
+              "Ele atirou",
+              "Ele atirou ninguém viu",
+              "É caboclo quem sabe aonde a flecha caiu",
+              "",
+              "Ele atirou",
+              "Ele atirou ninguém viu",
+              "É caboclo é quem sabe aonde a flecha caiu",
+              "",
+              "Ele atirou",
+              "Ele atirou ninguém viu",
+              "Só caboclo é quem sabe aonde a flecha caiu"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 15 · Sultão das matas — Ele é o rei, ele é o tata",
+            "inicio": 494,
+            "letra": [
+              "Ê sultão das matas lá na mata ele é o rei",
+              "Sultão das matas lá na mata ele é o tata",
+              "Lá na mata sua flecha voa",
+              "Voa muito longe quando desce ela mata",
+              "",
+              "Ele é o rei",
+              "Ele é o tata 2x",
+              "",
+              "E lá na mata sua flecha voa",
+              "Voa muito longe quando desce ela mata",
+              "",
+              "Ele é o rei",
+              "Ele é o tata 2x",
+              "",
+              "E lá na mata sua flecha voa",
+              "Voa muito longe quando desce ela mata",
+              "",
+              "Ele é o rei",
+              "Ele é o tata 2x"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 16 · Tava longe dessa aldeia",
+            "inicio": 524,
+            "letra": [
+              "Tava longe, tava longe, tava longe dessa aldeia 2x",
+              "Tava longe tava longe tava longe dessa aldeia 2x",
+              "Tava longe tava longe tava longe dessa aldeia 2x"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 17 · Nunca vi na minha aldeia — Tanaraê",
+            "inicio": 554,
+            "letra": [
+              "Ô nunca vi na minha aldeia tana",
+              "Ô cheia de espinhos tana",
+              "Tanta gente boa ê tana",
+              "Eu não tô sozinho ê tana",
+              "",
+              "Ê tanarae tanarae tanarae minha aldeia",
+              "Ê tanarae tanarae tanarae minha aldeia",
+              "Ê tanarae tanarae tanarae minha aldeia"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 18 · Caboclo tá no mato — Maiá dendê",
+            "inicio": 584,
+            "letra": [
+              "Caboclo tá no mato tá correndo sapucacaia ê maia dendê ê dendê caboclo maia",
+              "",
+              "ê maia dendê ê dendê caboclo maia",
+              "ê maia dendê ê dendê caboclo maia",
+              "ê maia dendê ê dendê caboclo maia",
+              "",
+              "Caboclo tá no mato tá correndo sapucacaia ê maia dendê ê dendê caboclo maia",
+              "ê maia dendê ê dendê caboclo maia",
+              "ê maia dendê ê dendê caboclo maia",
+              "ê maia dendê ê dendê caboclo maia"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 19 · Ô Sultão, aonde é que você mora",
+            "inicio": 614,
+            "letra": [
+              "Ô Sultão",
+              "Ô Sultão",
+              "Aonde é que você mora?",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Aonde é sua morada?",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Eu moro nas onda verde",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Nas ondas do mar sagrada",
+              "",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Aonde é que você mora?",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Aonde é sua morada?",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Eu moro nas onda verde",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Nas ondas do mar sagrada",
+              "",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Aonde é que você mora?",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Aonde é sua morada?",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Eu moro nas onda verde",
+              "Ô Sultão",
+              "Ô Sultão",
+              "Nas ondas do mar sagrada"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 20 · Sultão das matas é o rei do rei",
+            "inicio": 644,
+            "letra": [
+              "É sultão das matas é o rei do rei",
+              "Ê que vem da mina do ouro",
+              "Sultão das matas é um grande lindo rei",
+              "Ê que vem da mina do ouro",
+              "",
+              "Que de um lado sacode as penas",
+              "E do outro sobe a ouro",
+              "",
+              "É sultão das matas é o rei do rei",
+              "Ê que vem da mina do ouro",
+              "Sultão das matas é um grande lindo rei",
+              "Ê que vem da mina do ouro",
+              "",
+              "Que de um lado sacode as penas",
+              "E do outro sobe a ouro"
+            ],
+            "traducao": ""
+          },
+          {
+            "rotulo": "Ponto 21 · Sultão das matas subindo a montanha",
+            "inicio": 674,
+            "letra": [
+              "Sultão das matas subindo a montanha",
+              "Indorere que mata medonha",
+              "Indorere que mata medonha",
+              "Indorere que mata medonha",
+              "",
+              "Sultão das matas subindo a montanha",
+              "Indorere que mata medonha",
+              "Indorere que mata medonha",
+              "Indorere que mata medonha",
+              "",
+              "Sultão das matas subindo a montanha",
+              "Indorere que mata medonha",
+              "Indorere que mata medonha",
+              "Indorere que mata medonha"
+            ],
+            "traducao": ""
+          }
+        ]
+      }
+    ]
   }
 ];
