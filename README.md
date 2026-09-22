@@ -46,7 +46,6 @@ da lista, então inserir no meio não obriga a renumerar nada:
   "nome": "Boiadeiro Sete Flechas",
   "subtitulo": "LINHA DE BOIADEIRO",
   "cor": "#8a5a2b",
-  "corTexto": "#ffffff",
   "video": "abc123XYZ",
   "youtube": "https://youtu.be/abc123XYZ",
   "fonte": "",
@@ -72,8 +71,13 @@ Alguns cuidados que evitam dor de cabeça:
   linha é feita sozinha.
 - **`video`** é só o identificador do YouTube, não a URL inteira. Em
   `https://youtu.be/jAiVVy5IVnQ`, o valor é `jAiVVy5IVnQ`.
-- **`corTexto`** é a cor do número sobre o quadradinho colorido: use `#1a1a1a` quando
-  `cor` for clara e `#ffffff` quando for escura.
+- **`cor`** é a única cor que você informa. A página deriva sozinha a cor do número
+  e a versão clareada usada nos rótulos, sempre com contraste suficiente sobre o
+  fundo escuro — então não existe combinação que "some" na tela.
+- **`inicio`** é opcional: o segundo em que aquele trecho começa dentro do vídeo da
+  entidade. Com ele aparece um botão com o horário, que toca a gravação já a partir
+  dali. `1:14` vira `74` (minutos × 60 + segundos). Sem ele, nenhum botão aparece —
+  o que também serve de lembrete visual do que ainda falta conferir.
 - Campos que você não tem, deixe como texto vazio (`""`) ou omita a lista inteira.
   Botão sem conteúdo simplesmente não aparece.
 - Vírgula entre os objetos, e **nenhuma vírgula depois do último** — é a causa mais
