@@ -1926,16 +1926,13 @@ window.CANTIGAS = [
           {
             "rotulo": "Ponto 19 · Caboclo tá no mato — Maiá dendê",
             "letra": [
-              "Caboclo tá no mato tá correndo sapucacaia ê maia dendê ê dendê caboclo maia",
+              "Caboclo tá no mato tá correndo sapucacaia 2x",
+              "ê maia dendê ê dendê caboclo maia 2x",
               "",
-              "ê maia dendê ê dendê caboclo maia",
-              "ê maia dendê ê dendê caboclo maia",
-              "ê maia dendê ê dendê caboclo maia",
+              "ê maia dendê ê dendê caboclo maia 3x",
               "",
-              "Caboclo tá no mato tá correndo sapucacaia ê maia dendê ê dendê caboclo maia",
-              "ê maia dendê ê dendê caboclo maia",
-              "ê maia dendê ê dendê caboclo maia",
-              "ê maia dendê ê dendê caboclo maia"
+              "Caboclo tá no mato tá correndo sapucacaia 2x",
+              "ê maia dendê ê dendê caboclo maia 4x"
             ],
             "traducao": "",
             "inicio": 1990
