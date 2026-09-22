@@ -1506,7 +1506,7 @@ window.CANTIGAS = [
     "rotulo": "Caboclo & Boiadeiro",
     "titulo": "Cantigas<br>de Caboclo",
     "subtitulo": "Pontos cantados de caboclo e boiadeiro, com letra e áudio de referência.",
-    "nota": "Assim como no xirê, a referência principal é sempre a forma cantada na casa. A gravação é um vídeo só: o botão com o horário ao lado de cada ponto pula direto para o momento dele. <strong>Os horários ainda são provisórios</strong> e serão ajustados.",
+    "nota": "Assim como no xirê, a referência principal é sempre a forma cantada na casa. A gravação é um vídeo só: o botão com o horário ao lado do ponto pula direto para o momento dele. Os pontos ainda <strong>sem horário</strong> aparecem sem botão, e ganham o seu assim que o tempo for conferido na gravação.",
     "entidades": [
       {
         "id": "caboclo-sultao-das-matas",
@@ -1520,22 +1520,27 @@ window.CANTIGAS = [
         "cantigas": [
           {
             "rotulo": "Ponto 1 · Saudação — Abre a sala do angolê",
-            "inicio": 74,
             "letra": [
               "Abre a sala do angole",
               "E buki buke lele",
               "Abre a sala do angole",
               "E buki buke Lala",
-              "2x",
-              "",
+              "2x"
+            ],
+            "traducao": "",
+            "inicio": 74
+          },
+          {
+            "rotulo": "Ponto 2 · Eu aprendi campestre verde",
+            "letra": [
               "Eu aprendi campestre verde 2x",
               "Cheio de tanta alegria 2x"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 128
           },
           {
-            "rotulo": "Ponto 2 · Abre esse campestre",
-            "inicio": 104,
+            "rotulo": "Ponto 3 · Abre esse campestre",
             "letra": [
               "Abre esse campestre que eu quero passar 2x",
               "Quero ver meu povo do lado de lá",
@@ -1556,11 +1561,11 @@ window.CANTIGAS = [
               "Tava lhe chamando lhe chamando eee",
               "Tava lhe chamando lhe chamando eeuaa 4x"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 792
           },
           {
-            "rotulo": "Ponto 3 · Ira ra mi na kue — Pisa na trilha",
-            "inicio": 134,
+            "rotulo": "Ponto 4 · Ira ra mi na kue — Pisa na trilha",
             "letra": [
               "Ira ra mi na kue",
               "Ira ra mi na kue 2x.",
@@ -1573,11 +1578,11 @@ window.CANTIGAS = [
               "Piza na trilha, vem ver",
               "Vem ver caboclo a sua aldeia 2x"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 402
           },
           {
-            "rotulo": "Ponto 4 · Eu dei um tiro na sapucaia",
-            "inicio": 164,
+            "rotulo": "Ponto 5 · Eu dei um tiro na sapucaia",
             "letra": [
               "Eu dei um tiro na sapucaia não há caboclo que não ouça e que não saia 2x",
               "",
@@ -1602,8 +1607,7 @@ window.CANTIGAS = [
             "traducao": ""
           },
           {
-            "rotulo": "Ponto 5 · Eu chorei na boca da mata",
-            "inicio": 194,
+            "rotulo": "Ponto 6 · Eu chorei na boca da mata",
             "letra": [
               "Eu chorei na boca da mata,",
               "três caboclos me apareceu",
@@ -1641,11 +1645,11 @@ window.CANTIGAS = [
               "Ele é caboclo diz que veste pena Venha ver",
               "A força que a Jurema tem"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 561
           },
           {
-            "rotulo": "Ponto 6 · O meu pavão",
-            "inicio": 224,
+            "rotulo": "Ponto 7 · O meu pavão",
             "letra": [
               "O meu pavão foi na beira do rio ia",
               "E caboclo pegou",
@@ -1663,11 +1667,11 @@ window.CANTIGAS = [
               "",
               "Piza caboclo de um lado pro outro"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 706
           },
           {
-            "rotulo": "Ponto 7 · Ô mata medonha",
-            "inicio": 254,
+            "rotulo": "Ponto 8 · Ô mata medonha",
             "letra": [
               "O mata mata",
               "O mata medonha",
@@ -1679,11 +1683,11 @@ window.CANTIGAS = [
               "O mata medonha meu Deus",
               "Eu vou caçar nela"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 829
           },
           {
-            "rotulo": "Ponto 8 · Mata virgem — Caboclo é a luz do mato",
-            "inicio": 284,
+            "rotulo": "Ponto 9 · Mata virgem — Caboclo é a luz do mato",
             "letra": [
               "mata virgem",
               "mata ia",
@@ -1725,11 +1729,11 @@ window.CANTIGAS = [
               "Caboclo é",
               "a luz do mato é 2x"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 891
           },
           {
-            "rotulo": "Ponto 9 · Mi na ora — Quem manda é caboclo",
-            "inicio": 314,
+            "rotulo": "Ponto 10 · Mi na ora — Quem manda é caboclo",
             "letra": [
               "Mi na ora eeee",
               "Mi na oraaaa",
@@ -1750,20 +1754,20 @@ window.CANTIGAS = [
               "",
               "Lá la i la lá i lá"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1101
           },
           {
-            "rotulo": "Ponto 10 · Iraraê",
-            "inicio": 344,
+            "rotulo": "Ponto 11 · Iraraê",
             "letra": [
               "Ooooo iraraeee iraraee iraraee",
               "Oooo ira ira ra i ra ra i ra"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1140
           },
           {
-            "rotulo": "Ponto 11 · Sindorerê — Cauiza é o rei",
-            "inicio": 374,
+            "rotulo": "Ponto 12 · Sindorerê — Cauiza é o rei",
             "letra": [
               "Sindorere auê cauiza",
               "Sindorere é o sangue real",
@@ -1791,19 +1795,19 @@ window.CANTIGAS = [
               "Ê cauiza cauizou",
               "Auê cauizou 2x"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1408
           },
           {
-            "rotulo": "Ponto 12 · Sai do mato",
-            "inicio": 404,
+            "rotulo": "Ponto 13 · Sai do mato",
             "letra": [
-              "Sai do mato e vem ….?",
+              "Sai do mato e vem pra aldeia",
               "Sindorere bora caboclo",
               "",
-              "Sai do mato e vem ….?",
+              "Sai do mato e vem pra aldeia",
               "Sindorere bora caboclo",
               "",
-              "Sai do mato e vem ….?",
+              "Sai do mato e vem pra aldeia",
               "Sindorere bora caboclo",
               "",
               "Ê caboclo é",
@@ -1814,11 +1818,11 @@ window.CANTIGAS = [
               "Caboclo é",
               "Caboclo é a luz do mato é"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1530
           },
           {
-            "rotulo": "Ponto 13 · Com Jesus de Maria — Lá na Hungria",
-            "inicio": 434,
+            "rotulo": "Ponto 14 · Com Jesus de Maria — Lá na Hungria",
             "letra": [
               "Ke ke ke ke keua ke ke ke com jesus de maria",
               "",
@@ -1858,11 +1862,11 @@ window.CANTIGAS = [
               "Lá na Hungria",
               "Ê lá na Hungria na Hungriaaa"
             ],
-            "traducao": ""
+            "traducao": "",
+            "inicio": 1560
           },
           {
-            "rotulo": "Ponto 14 · Ele atirou",
-            "inicio": 464,
+            "rotulo": "Ponto 15 · Ele atirou",
             "letra": [
               "Ele atirou, ele atirou ninguém viu",
               "E caboclo é quem sabe aonde a flecha caiu",
@@ -1882,8 +1886,7 @@ window.CANTIGAS = [
             "traducao": ""
           },
           {
-            "rotulo": "Ponto 15 · Sultão das matas — Ele é o rei, ele é o tata",
-            "inicio": 494,
+            "rotulo": "Ponto 16 · Sultão das matas — Ele é o rei, ele é o tata",
             "letra": [
               "Ê sultão das matas lá na mata ele é o rei",
               "Sultão das matas lá na mata ele é o tata",
@@ -1908,8 +1911,7 @@ window.CANTIGAS = [
             "traducao": ""
           },
           {
-            "rotulo": "Ponto 16 · Tava longe dessa aldeia",
-            "inicio": 524,
+            "rotulo": "Ponto 17 · Tava longe dessa aldeia",
             "letra": [
               "Tava longe, tava longe, tava longe dessa aldeia 2x",
               "Tava longe tava longe tava longe dessa aldeia 2x",
@@ -1918,8 +1920,7 @@ window.CANTIGAS = [
             "traducao": ""
           },
           {
-            "rotulo": "Ponto 17 · Nunca vi na minha aldeia — Tanaraê",
-            "inicio": 554,
+            "rotulo": "Ponto 18 · Nunca vi na minha aldeia — Tanaraê",
             "letra": [
               "Ô nunca vi na minha aldeia tana",
               "Ô cheia de espinhos tana",
@@ -1933,8 +1934,7 @@ window.CANTIGAS = [
             "traducao": ""
           },
           {
-            "rotulo": "Ponto 18 · Caboclo tá no mato — Maiá dendê",
-            "inicio": 584,
+            "rotulo": "Ponto 19 · Caboclo tá no mato — Maiá dendê",
             "letra": [
               "Caboclo tá no mato tá correndo sapucacaia ê maia dendê ê dendê caboclo maia",
               "",
@@ -1950,8 +1950,7 @@ window.CANTIGAS = [
             "traducao": ""
           },
           {
-            "rotulo": "Ponto 19 · Ô Sultão, aonde é que você mora",
-            "inicio": 614,
+            "rotulo": "Ponto 20 · Ô Sultão, aonde é que você mora",
             "letra": [
               "Ô Sultão",
               "Ô Sultão",
@@ -1995,8 +1994,7 @@ window.CANTIGAS = [
             "traducao": ""
           },
           {
-            "rotulo": "Ponto 20 · Sultão das matas é o rei do rei",
-            "inicio": 644,
+            "rotulo": "Ponto 21 · Sultão das matas é o rei do rei",
             "letra": [
               "É sultão das matas é o rei do rei",
               "Ê que vem da mina do ouro",
@@ -2017,8 +2015,7 @@ window.CANTIGAS = [
             "traducao": ""
           },
           {
-            "rotulo": "Ponto 21 · Sultão das matas subindo a montanha",
-            "inicio": 674,
+            "rotulo": "Ponto 22 · Sultão das matas subindo a montanha",
             "letra": [
               "Sultão das matas subindo a montanha",
               "Indorere que mata medonha",
